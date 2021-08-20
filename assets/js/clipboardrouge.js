@@ -52,7 +52,7 @@ async function warningTooltip(btn, message) {
 // Insert buttons 
 $(document).ready(function() {	
 	// HTML Button styled with BST4
-	var copyButton = 	"<button class='btn btn-light btn-sm btn-copy-code' " +
+	var copyButton = 	"<button class='btn btn-light btn-sm btn-chulapa-copy-code' " +
 	                    "type = 'button' " +
 						"data-toggle='tooltip'" +
 						"data-placement='left'" +
