@@ -156,6 +156,7 @@ chulapa-skin:
      primary: "#986dbd"
      navbar-chulapa-bg-color: white
      navbar-chulapa-toggler-color: "#986dbd"
+     hero-chulapa-bg-color: "#986dbd"
      footer-chulapa-bg-color: "#333"
      link-color: "#986dbd"
      footer-chulapa-text-color: white
