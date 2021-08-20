@@ -161,8 +161,9 @@ chulapa-skin:
      footer-chulapa-bg-color: "#333"
      headings-color: "#333"
      link-color: "#986dbd"
-     footer-chulapa-text-color: white
+     footer-chulapa-text-color: "#ccc"
      footer-chulapa-icon-color: "#986dbd"
+     footer-chulapa-hover-color: "#e0d3eb"
      enable-responsive-font-sizes: true
      headings-font-weight: 700
     
