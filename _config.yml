@@ -158,9 +158,12 @@ chulapa-skin:
      navbar-chulapa-toggler-color: "#986dbd"
      hero-chulapa-bg-color: "#986dbd"
      footer-chulapa-bg-color: "#333"
+     headings-color: "#333"
      link-color: "#986dbd"
      footer-chulapa-text-color: white
      footer-chulapa-icon-color: "#986dbd"
+     enable-responsive-font-sizes: true
+     headings-font-weight: 700
     
 # D. Jekyll Defaults and collections: see https://jekyllrb.com/
 
