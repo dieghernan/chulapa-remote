@@ -154,6 +154,10 @@ chulapa-skin:
      font-family-base: "Roboto"
      font-family-monospace: "Roboto Mono"
      primary: "#986dbd"
+     green: "#97bf13"
+     red:     "#dc3545"
+     orange:  "#fd7e14"
+     yellow:  "#ffc107"
      navbar-chulapa-bg-color: white
      navbar-chulapa-toggler-color: "#986dbd"
      navbar-chulapa-active-color: "#986dbd"
