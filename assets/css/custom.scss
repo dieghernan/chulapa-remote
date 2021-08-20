@@ -36,7 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 
 
 th, .btn, .chulapa-toc-wrapper, .chulapa-subtitle, .breadcrumb {
-    text-transform: uppercase;
+  text-transform: uppercase;
 }
 
 .splash-chulapa, .hero-chulapa, .header-chulapa {
@@ -46,15 +46,17 @@ th, .btn, .chulapa-toc-wrapper, .chulapa-subtitle, .breadcrumb {
 }
 
 .header-chulapa hr {
-    background-color: transparent !important;
+  background-color: transparent !important;
 }
 
 .header-chulapa {
-    text-align: center;
+  text-align: center;
 }
 
 .chulapa-bg-landingpage header {
   color: black !important;
-
 }
 
+.language-plaintext {
+  color: #97bf13;
+}
