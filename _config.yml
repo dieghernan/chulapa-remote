@@ -170,7 +170,6 @@ chulapa-skin:
      footer-chulapa-icon-color: "#986dbd"
      enable-responsive-font-sizes: true
      headings-font-weight: 700
-     enable-rounded: false
      border-radius: 0
      border-radius-lg: 0
      border-radius-sm: 0
