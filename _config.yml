@@ -166,6 +166,10 @@ chulapa-skin:
      footer-chulapa-hover-color: "#e0d3eb"
      enable-responsive-font-sizes: true
      headings-font-weight: 700
+     enable-rounded: false 
+     border-radius: 0
+     border-radius-lg: 0 
+     border-radius-sm: 0 
     
 # D. Jekyll Defaults and collections: see https://jekyllrb.com/
 
