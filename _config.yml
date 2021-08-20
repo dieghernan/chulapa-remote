@@ -154,6 +154,9 @@ chulapa-skin:
      font-family-base: "Roboto"
      font-family-monospace: "Roboto Mono"
      primary: "#986dbd"
+     navbar-chulapa-bg-color: white
+     navbar-chulapa-toggler-color: "#986dbd"
+     footer-chulapa-bg-color: "#555555",
     
 # D. Jekyll Defaults and collections: see https://jekyllrb.com/
 
