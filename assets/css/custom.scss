@@ -21,6 +21,7 @@ pre code {
 h1, h2, h3, h4, h5, h6 {
     text-transform: uppercase;
     letter-spacing: 0.08em;
+    font-weight: 700 !important;
 }
 
 
@@ -28,7 +29,6 @@ h1, h2, h3, h4, h5, h6 {
    .navbar-nav {
      text-transform: uppercase;
      text-decoration: underline;
-     font-weight: 700;
      letter-spacing: 0.08em;
      color: black;
    }
@@ -47,7 +47,7 @@ th, .btn, .chulapa-toc-wrapper, .chulapa-subtitle, .breadcrumb {
 
 // Remove rules
 header hr {
-  background-color: transparent !important;
+  display: none;
 }
 
 .header-chulapa {
