@@ -157,6 +157,9 @@ chulapa-skin:
      navbar-chulapa-bg-color: white
      navbar-chulapa-toggler-color: "#986dbd"
      footer-chulapa-bg-color: "#333"
+     link-color: "#986dbd"
+     footer-chulapa-text-color: white
+     footer-chulapa-icon-color: "#986dbd"
     
 # D. Jekyll Defaults and collections: see https://jekyllrb.com/
 
