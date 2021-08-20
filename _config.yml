@@ -15,7 +15,7 @@ baseurl: remote
 locale                  :     #default["en-US"] format language-TERRITORY , e.g fr, en-GB, es-MX, pt-BR
 title                   : Remote testing    #default["repository_name"]
 title_separator         :     #default [" | "]
-subtitle                : #default [your-repository-tagline]  
+subtitle                : #default [your-repository-tagline]
 description             : #default [your-repository-tagline]
 words_per_minute        :     #default[200]
 timezone                :     #"Europe/Madrid ,see https://jekyllrb.com/docs/configuration/options/ and https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
@@ -28,7 +28,7 @@ author:
   name: dieghernan
   avatar: https://github.com/dieghernan.png
   location: Madrid, Spain
-  links:                
+  links:
     - url: https://github.com/dieghernan/
       icon: "fab fa-github"
     - url: https://dieghernan.github.io/
@@ -36,30 +36,30 @@ author:
     - url: https://stackoverflow.com/users/7877917/dieghernan
       icon: "fab fa-stack-overflow"
 
-fa5_kit_code:  # Your FontAwesome 5 kit code. If not provided a free hosted version (slower) will be loaded:  https://fontawesome.com/ 
-fa_v4_support: #Bool Add FontAwesome 4 support 
+fa5_kit_code:  # Your FontAwesome 5 kit code. If not provided a free hosted version (slower) will be loaded:  https://fontawesome.com/
+fa_v4_support: #Bool Add FontAwesome 4 support
 # Web tracking - Google services https://analytics.google.com/analytics/web/
 # gtag_id is the preferred option, see https://developers.google.com/analytics/devguides/collection/gtagjs/migration?hl=en
 # analytics provided for backwards compatibility
-gtag_id                 :  
-analytics_id            :  
+gtag_id                 :
+analytics_id            :
 
 # Search providers
 # Available free search engines:
-# - lunr https://lunrjs.com/ 
+# - lunr https://lunrjs.com/
 # - algolia v4 https://www.algolia.com/ - needs further configuration
-# - google custom search engine https://cse.google.es/ 
+# - google custom search engine https://cse.google.es/
 search:
   provider              : algolia #Select a provider for enable search: lunr, algolia, google
-  label                 :  #default ["Search"] Text on navbar when search is enabled 
-  landing_page          :  #default ["/search"] Link on navbar 
+  label                 :  #default ["Search"] Text on navbar when search is enabled
+  landing_page          :  #default ["/search"] Link on navbar
   lunr_maxwords         :  #default [30] lunr only - May slow down your site build
-  algolia_logo          :  true #Displays algolia logo. Should be set to true if you are on a community plan, otherwise false.  
+  algolia_logo          :  true #Displays algolia logo. Should be set to true if you are on a community plan, otherwise false.
 
 google_cse_id: #Your cse id
 # This site uses jekyll-algolia plugin https://community.algolia.com/jekyll-algolia/
 # Recommended additional configuration provided, could be modified. Add your own parameters
-algolia:                                                                   
+algolia:
   application_id        : KOIKA5PDQO
   index_name            : remote
   search_only_api_key   : 7f1fe42bef3f03458cb3a911ebc7e0ac
@@ -69,28 +69,28 @@ algolia:
   extensions_to_index:      #Optional
     - html
     - md
-  searchableAttributes:     #Optional                                                    
-    - title                                                                    
-    - headings                                                                 
-    - unordered(content)                                                       
-    - unordered(subtitle)                                                      
-    - unordered(categories)                                                    
-    - unordered(collection)                                                    
-    - unordered(tags) 
+  searchableAttributes:     #Optional
+    - title
+    - headings
+    - unordered(content)
+    - unordered(subtitle)
+    - unordered(categories)
+    - unordered(collection)
+    - unordered(tags)
   customRanking:            #Optional
     - desc(include_on_search)
     - desc(title)
-    - desc(content) 
+    - desc(content)
     - desc(subtitle)
-    
+
 comments:
   provider:         #Enable comments via Disqus https://disqus.com/
   disqus_shortname: #Your site id : check your address https://{{ disqus.shortname }}.disqus.com/admin/
-  
+
 # B. Navigation
 # Configure your navbar and the footer of your site
 
-# Navbar: 
+# Navbar:
 #   "brand" options would be set on the left side of your navbar
 #   "nav" would be set on the right side. Two-level nav links available
 navbar:
@@ -102,7 +102,7 @@ navbar:
     img     :  # An small image, try 30x30px
   nav:
   - title   : Blog # Label
-    url     : /blog/ # url	
+    url     : /blog/ # url
   - title   : Cheatsheets
     url     : /cheatsheets
   - title   : Demos
@@ -122,11 +122,11 @@ navbar:
   - title   : Use this template
     url     : https://github.com/dieghernan/chulapa-101/generate
 #  - title   : # Label submenu
-#    child:		
-#    - title: # Child label		
-#      url  : # child url	
-#    - title: # Child label		
-#      url  : # child url	
+#    child:
+#    - title: # Child label
+#      url  : # child url
+#    - title: # Child label
+#      url  : # child url
 #Social links to be placed on your site footer
 footer:
   links:
@@ -136,8 +136,8 @@ footer:
     - label: "RSS"
       icon: "fa fa-rss"
       url:  "./atom.xml"
-      
-      
+
+
 # C. Theme Settings
 # Google Fonts https://fonts.google.com/, add as many as you need
 googlefonts:
@@ -146,7 +146,7 @@ googlefonts:
 
 
 # Theme and colors
-chulapa-skin: 
+chulapa-skin:
   highlight     :  emacs #default["default"]
    # Optional predefined skins
   autothemer    :  true # Bool: Use autotheming
@@ -162,6 +162,7 @@ chulapa-skin:
      navbar-chulapa-toggler-color: "#986dbd"
      navbar-chulapa-active-color: "#986dbd"
      hero-chulapa-bg-color: "#986dbd"
+     hero-chulapa-text-color: black
      footer-chulapa-bg-color: "#333"
      headings-color: "#333"
      link-color: "#986dbd"
@@ -169,11 +170,11 @@ chulapa-skin:
      footer-chulapa-icon-color: "#986dbd"
      enable-responsive-font-sizes: true
      headings-font-weight: 700
-     enable-rounded: false 
+     enable-rounded: false
      border-radius: 0
-     border-radius-lg: 0 
-     border-radius-sm: 0 
-    
+     border-radius-lg: 0
+     border-radius-sm: 0
+
 # D. Jekyll Defaults and collections: see https://jekyllrb.com/
 
 # Blog pagination: on this site /blog/index.html. https://jekyllrb.com/docs/pagination/
@@ -189,7 +190,7 @@ collections:
   demo:
     output: true
     permalink: /demo/:name
-collections_dir     : 
+collections_dir     :
 permalink           : /:year:month:day_:title/
 
 
