@@ -149,7 +149,7 @@ googlefonts:
 chulapa-skin: 
   highlight     :  #default["default"]
    # Optional predefined skins
-  autothemer    :  false # Bool: Use autotheming
+  autothemer    :  true # Bool: Use autotheming
   vars          :
      font-family-base: "Roboto"
      font-family-monospace: "Roboto Mono"
