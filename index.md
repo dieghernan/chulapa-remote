@@ -1,10 +1,9 @@
 ---
-layout: landingpage
 title: Landing page
 subtitle: First impression is the last impression
-categories: [demo, landingpage]
+categories: [demo]
 header_type: hero
-tags: [layout-landingpage,header-hero, social-links, tags, categories, bottom-navs, date, comments, image, author]
+tags: [header-hero, social-links, tags, categories, bottom-navs, date, comments, image, author]
 date: 2020-01-04
 show_date         : true
 show_sociallinks  : true
