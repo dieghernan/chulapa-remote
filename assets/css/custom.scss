@@ -24,13 +24,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-.navbar-chulapa {
-   .navbar-nav {
+.navbar {
+   .dropdown-item {
      text-transform: uppercase;
      text-decoration: underline;
      font-weight: 700;
      letter-spacing: 0.08em;
      color: black;
    }
+}
 
+
+th, .btn, .chulapa-toc-wrapper, .chulapa-subtitle {
+    text-transform: uppercase;
 }
