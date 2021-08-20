@@ -136,7 +136,6 @@ footer:
     - label: "RSS"
       icon: "fa fa-rss"
       url:  "./atom.xml"
-  copyright: "This <strong>is</strong> a <code>test</code>" # default is © <year> <name>
 
 
 # C. Theme Settings
