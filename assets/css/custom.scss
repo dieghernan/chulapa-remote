@@ -45,12 +45,17 @@ th, .btn, .chulapa-toc-wrapper, .chulapa-subtitle, .breadcrumb {
 
 }
 
-.fa { 
-  transition:.5s; /* this is grow duration */
+.fa, .far, .fas, .fal, .fab { 
+    -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 
-.fa:hover {
-transform:scale(1.5); /* this is grow amount */
+.fa:hover, .far:hover, .fas:hover, .fal:hover, .fab:hover {
+  -webkit-transform: scale(1.1, 1.1);
+  -ms-transform: scale(1.1, 1.1);
+  -o-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
 }
 
 // Remove rules
