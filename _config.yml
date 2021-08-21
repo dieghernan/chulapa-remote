@@ -163,6 +163,7 @@ chulapa-skin:
      yellow:  "#ffc107"
      headings-color: "#333"
      link-color: "#986dbd"
+     navbar-chulapa-brand-color: "#000"
      navbar-chulapa-bg-color: white
      navbar-chulapa-toggler-color: "#986dbd"
      navbar-chulapa-active-color: "#986dbd"
