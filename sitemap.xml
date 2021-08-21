@@ -2,19 +2,19 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://dieghernan.github.io/remote/cheatsheets/01-markdown-cheat-sheet</loc>
-<lastmod>2021-08-21T07:36:02+00:00</lastmod>
+<lastmod>2021-08-21T07:47:18+00:00</lastmod>
 </url>
 <url>
 <loc>https://dieghernan.github.io/remote/cheatsheets/02-kramdown-cheat-sheet</loc>
-<lastmod>2021-08-21T07:36:02+00:00</lastmod>
+<lastmod>2021-08-21T07:47:18+00:00</lastmod>
 </url>
 <url>
 <loc>https://dieghernan.github.io/remote/demo/01-plainpage</loc>
-<lastmod>2021-08-21T07:36:02+00:00</lastmod>
+<lastmod>2021-08-21T07:47:18+00:00</lastmod>
 </url>
 <url>
 <loc>https://dieghernan.github.io/remote/demo/02-plainpage-img</loc>
-<lastmod>2021-08-21T07:36:02+00:00</lastmod>
+<lastmod>2021-08-21T07:47:18+00:00</lastmod>
 </url>
 <url>
 <loc>https://dieghernan.github.io/remote/demo/03-postheader</loc>
@@ -38,11 +38,11 @@
 </url>
 <url>
 <loc>https://dieghernan.github.io/remote/demo/08-minimal</loc>
-<lastmod>2021-08-21T07:36:02+00:00</lastmod>
+<lastmod>2021-08-21T07:47:18+00:00</lastmod>
 </url>
 <url>
 <loc>https://dieghernan.github.io/remote/demo/09-image-header</loc>
-<lastmod>2021-08-21T07:36:02+00:00</lastmod>
+<lastmod>2021-08-21T07:47:18+00:00</lastmod>
 </url>
 <url>
 <loc>https://dieghernan.github.io/remote/20150104_first-post/</loc>
@@ -137,6 +137,6 @@
 </url>
 <url>
 <loc>https://dieghernan.github.io/remote/a.html</loc>
-<lastmod>2021-08-21T07:35:52+00:00</lastmod>
+<lastmod>2021-08-21T07:47:09+00:00</lastmod>
 </url>
 </urlset>
