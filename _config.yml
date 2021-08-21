@@ -153,6 +153,7 @@ chulapa-skin:
   vars          :
      font-family-base: "Roboto"
      font-family-monospace: "Roboto Mono"
+     body-bg: "#fff"
      primary: "#986dbd"
      green: "#97bf13"
      red:     "#dc3545"
@@ -168,6 +169,7 @@ chulapa-skin:
      link-color: "#986dbd"
      footer-chulapa-text-color: "#ccc"
      footer-chulapa-icon-color: "#986dbd"
+     footer-chulapa-icon-hover-color: "#724599"
      enable-responsive-font-sizes: true
      headings-font-weight: 700
 
