@@ -45,6 +45,14 @@ th, .btn, .chulapa-toc-wrapper, .chulapa-subtitle, .breadcrumb {
 
 }
 
+.fa { 
+  transition:.5s; /* this is grow duration */
+}
+
+.fa:hover {
+transform:scale(1.5); /* this is grow amount */
+}
+
 // Remove rules
 header hr {
   display: none;
