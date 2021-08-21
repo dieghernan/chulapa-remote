@@ -49,6 +49,10 @@ header hr {
 // Navbar
 
 .navbar {
+
+   .navbar-brand {
+     font-weight: 300 !important;
+   }
    .navbar-nav {
      text-transform: uppercase;
      text-decoration: underline;
