@@ -170,7 +170,7 @@ chulapa-skin:
      hero-chulapa-text-color: black
      footer-chulapa-bg-color: "#333"
      footer-chulapa-text-color: "#ccc"
-     footer-chulapa-icon-color: "#986dbd"
+     footer-chulapa-icon-color: "#ccc"
      footer-chulapa-icon-hover-color: "#724599"
 
 # D. Jekyll Defaults and collections: see https://jekyllrb.com/
