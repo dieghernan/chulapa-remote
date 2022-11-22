@@ -18,10 +18,11 @@ function ytdefer_setup() {
         var h = e.clientHeight;
         var dv = d.createElement("div");
         dv.id = "ytdefer_vid" + i;
-        dv.style.width = w + "px";
-        dv.style.height = h + "px";
-        dv.style.position = "relative";
-        dv.onresize = ytdefer_resize;
+        //dv.style.width = w + "px";
+        //dv.style.height = h + "px";
+        //dv.style.position = "relative";
+        //dv.onresize = ytdefer_resize;
+        dv.classList.add('embed-responsive', 'embed-responsive-16by9', 'my-2' 'chulapa-rounded-lg');
         e.appendChild(dv);
         var im = d.createElement("img");
         if (e.hasAttribute("data-alt")) {
@@ -32,16 +33,15 @@ function ytdefer_setup() {
             var title = e.getAttribute("data-title");
             im.title = title;
         }
-        var res = "0";
-        if (w > 480) {
-            res = "maxresdefault";
-        }
+        var res = "maxresdefault";
         im.src = "https://img.youtube.com/vi/" + ds + "/" + res + ".jpg";
         im.id = "ytdefer_img" + i;
         im.style.width = "100%";
         im.style.height = "100%";
         im.style.objectFit = "cover";
         im.style.position = "absolute";
+        im.style.maxWidth = "100%";
+        im.classList.add("embed-responsive-item");
         im.onclick = gen_ytdefer_clk(i);
         dv.appendChild(im);
         var bt = d.createElement("button");
