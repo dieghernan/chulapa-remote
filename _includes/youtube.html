@@ -1,6 +1,7 @@
 <script src="{{ '/assets/ytdefer.min.js' | absolute_url }}"></script>
-
-<div style="margin:auto;width:380px;height:250px;max-width:95%;" class="ytdefer" data-alt="some-alt-text-here" data-title="some-alt-text-here" data-src="{{ include.id }}"></div>
+<div class="embed-responsive embed-responsive-16by9 my-2 chulapa-rounded-lg">
+  <div class="ytdefer embed-responsive-item" data-src="{{ include.id }}"></div>
+</div>
 
 <script>
 window.addEventListener('load', ytdefer_setup);
