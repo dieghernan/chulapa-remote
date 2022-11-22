@@ -19,6 +19,10 @@ function ytdefer_setup() {
         var dv = d.createElement("div");
         dv.id = "ytdefer_vid" + i;
         dv.classList.add('embed-responsive', 'embed-responsive-16by9', 'my-2', 'chulapa-rounded-lg');
+        dv.style.width = w + "px";
+        dv.style.height = h + "px";
+        dv.style.position = "relative";
+        dv.onresize = ytdefer_resize;
         e.appendChild(dv);
         var im = d.createElement("img");
         if (e.hasAttribute("data-alt")) {
@@ -71,6 +75,9 @@ function ytdefer_resize() {
         var e = els[i];
         var w = e.clientWidth;
         var h = e.clientHeight;
+        var dv = d.getElementById("ytdefer_vid" + i);
+        dv.style.width = w + "px";
+        dv.style.height = h + "px";
         var ic = d.getElementById("ytdefer_icon" + i);
         if (null != ic) {
             ic.style.left = w / 2 - ytdefer_ic_w / 2 + "px";
