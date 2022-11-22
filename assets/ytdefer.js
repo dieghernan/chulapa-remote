@@ -76,6 +76,11 @@ function ytdefer_resize() {
         var w = e.clientWidth;
         var h = e.clientHeight;
         var dv = d.getElementById("ytdefer_vid" + i);
+        if (dv.tagName == "iframe") {
+          dv.removeAttribute('style');
+          ic.remove();
+        } else {
+        
         dv.style.width = w + "px";
         dv.style.height = h + "px";
         var ic = d.getElementById("ytdefer_icon" + i);
@@ -84,6 +89,7 @@ function ytdefer_resize() {
             ic.style.top = h / 2 - ytdefer_ic_h / 2 + "px";
         }
     }
+  } 
 }
 function gen_mouseout(bt) {
     return function () {
