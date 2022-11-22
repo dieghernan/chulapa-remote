@@ -66,7 +66,7 @@ function ytdefer_setup() {
         js.src = "https://www.youtube.com/player_api";
         d.body.appendChild(js);
     }
-    //window.addEventListener("resize", ytdefer_resize);
+    window.addEventListener("resize", ytdefer_resize);
 }
 function ytdefer_resize() {
     var d = document;
@@ -99,6 +99,8 @@ function gen_ytdefer_clk(i) {
     return function () {
         var d = document;
         var el = d.getElementById("ytdefer_vid" + i);
+        var ic = d.getElementById("ytdefer_icon" + i);
+        ic.remove();
         var vid_id = el.parentNode.getAttribute("data-src");
         var im = d.getElementById("ytdefer_img" + i);
         im.removeAttribute('style');
