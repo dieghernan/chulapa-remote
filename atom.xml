@@ -3,7 +3,7 @@
 	<generator uri="https://dieghernan.github.io/chulapa" version="1.0.0">Chulapa</generator>
 	<link href="https://dieghernan.github.io/remote/atom.xml" rel="self" type="application/atom+xml" />
 	<link href="https://dieghernan.github.io/remote" rel="alternate" type="text/html" />
-	<updated>2021-08-30T23:32:41+00:00</updated>
+	<updated>2022-11-22T11:32:22+00:00</updated>
 	<id>https://dieghernan.github.io/remote/atom.xml</id>
 	<title>Remote testing</title>
 	
@@ -11,7 +11,7 @@
 		<name>dieghernan</name>
 		<uri>https://github.com/dieghernan/</uri>			
 	</author>
-	<rights>(c) 2021, dieghernan</rights>
+	<rights>(c) 2022, dieghernan</rights>
 	
 	<logo>https://github.com/dieghernan.png</logo><entry>
 		<title>Last post!</title>
