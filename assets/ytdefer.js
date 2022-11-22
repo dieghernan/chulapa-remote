@@ -22,7 +22,7 @@ function ytdefer_setup() {
         //dv.style.height = h + "px";
         //dv.style.position = "relative";
         //dv.onresize = ytdefer_resize;
-        dv.classList.add('embed-responsive', 'embed-responsive-16by9', 'my-2' 'chulapa-rounded-lg');
+        dv.classList.add('embed-responsive', 'embed-responsive-16by9', 'my-2', 'chulapa-rounded-lg');
         e.appendChild(dv);
         var im = d.createElement("img");
         if (e.hasAttribute("data-alt")) {
