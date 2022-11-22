@@ -66,7 +66,7 @@ function ytdefer_setup() {
         js.src = "https://www.youtube.com/player_api";
         d.body.appendChild(js);
     }
-    window.addEventListener("resize", ytdefer_resize);
+    //window.addEventListener("resize", ytdefer_resize);
 }
 function ytdefer_resize() {
     var d = document;
