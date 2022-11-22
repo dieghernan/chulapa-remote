@@ -66,7 +66,7 @@ function ytdefer_setup() {
         js.src = "https://www.youtube.com/player_api";
         d.body.appendChild(js);
     }
-    window.addEventListener("resize", ytdefer_resize);
+    //window.addEventListener("resize", ytdefer_resize);
 }
 function ytdefer_resize() {
     var d = document;
@@ -101,6 +101,7 @@ function gen_ytdefer_clk(i) {
         var el = d.getElementById("ytdefer_vid" + i);
         var vid_id = el.parentNode.getAttribute("data-src");
         var im = d.getElementById("ytdefer_img" + i);
+        im.removeAttribute('style');
         var player = new YT.Player(im.id, {
             videoId: vid_id,
             events: {
