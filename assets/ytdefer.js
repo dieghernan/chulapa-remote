@@ -18,10 +18,6 @@ function ytdefer_setup() {
         var h = e.clientHeight;
         var dv = d.createElement("div");
         dv.id = "ytdefer_vid" + i;
-        //dv.style.width = w + "px";
-        //dv.style.height = h + "px";
-        //dv.style.position = "relative";
-        //dv.onresize = ytdefer_resize;
         dv.classList.add('embed-responsive', 'embed-responsive-16by9', 'my-2', 'chulapa-rounded-lg');
         e.appendChild(dv);
         var im = d.createElement("img");
@@ -66,7 +62,7 @@ function ytdefer_setup() {
         js.src = "https://www.youtube.com/player_api";
         d.body.appendChild(js);
     }
-    //window.addEventListener("resize", ytdefer_resize);
+    window.addEventListener("resize", ytdefer_resize);
 }
 function ytdefer_resize() {
     var d = document;
@@ -75,9 +71,6 @@ function ytdefer_resize() {
         var e = els[i];
         var w = e.clientWidth;
         var h = e.clientHeight;
-        var dv = d.getElementById("ytdefer_vid" + i);
-        dv.style.width = w + "px";
-        dv.style.height = h + "px";
         var ic = d.getElementById("ytdefer_icon" + i);
         if (null != ic) {
             ic.style.left = w / 2 - ytdefer_ic_w / 2 + "px";
