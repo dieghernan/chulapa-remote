@@ -5,7 +5,7 @@
     <!--  MIT License-->
     <!-- Docs: https://dieghernan.github.io/chulapa -->
     <!-- Repo: https://github.com/dieghernan/chulapa -->
-    <!-- Page build 2022-11-22 13:33:35 +0000 -->
+    <!-- Page build 2022-11-22 13:55:25 +0000 -->
     <!--Google Structured Data-->
     <script type="application/ld+json">
         {
@@ -17,8 +17,8 @@
       },
       "headline": "Include a video",
       "image": "https://github.com/dieghernan.png",
-      "datePublished": "2022-11-22T13:33:35+00:00",
-      "dateModified": "2022-11-22T13:33:35+00:00",
+      "datePublished": "2022-11-22T13:55:25+00:00",
+      "dateModified": "2022-11-22T13:55:25+00:00",
       "author": {
         "@type": "Person",
         "name": "dieghernan"
@@ -203,28 +203,17 @@
 			<article class="col-lg-8 mt-3">
 			<p>Just testing a video</p>
 <h2 id="native-support-of-chulapa">Native support of <span class="chulapa">Chulapa</span></h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-
-&lt;!-- Thanks to Minimal Mistakes --&gt;
-&lt;!-- https://embedresponsively.com/ --&gt;
-&lt;div class="embed-responsive embed-responsive-16by9 my-2 chulapa-rounded-lg"&gt;&lt;iframe loading="lazy" class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/1hXYuWTWVww" allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% include snippets/video.html id="1hXYuWTWVww" provider="youtube" %}
 </code></pre></div></div>
 <!-- Thanks to Minimal Mistakes -->
 <!-- https://embedresponsively.com/ -->
 <div class="embed-responsive embed-responsive-16by9 my-2 chulapa-rounded-lg"><iframe loading="lazy" class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/1hXYuWTWVww" allowfullscreen=""></iframe>
 </div>
 <h2 id="with-other-alternatives">With other alternatives</h2>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script src="/assets/ytdefer.min.js"&gt;&lt;/script&gt;
-
-&lt;div class="ytdefer embed-responsive embed-responsive-16by9 my-2 chulapa-rounded-lg" data-alt="some-alt-text-here" data-title="some-alt-text-here" data-src="1hXYuWTWVww"&gt;&lt;/div&gt;
-
-&lt;script&gt;
-window.addEventListener('load', ytdefer_setup);
-&lt;/script&gt;
+<p>See <a href="https://github.com/alfurka/jekyll-embed-youtube-lazy-load">Lazy Loading YouTube Videos in Jekyll Posts</a>.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{% include youtube.html id='1hXYuWTWVww' %}
 </code></pre></div></div>
-<script src="/assets/ytdefer.min.js"></script>
+<p>&lt;script src=https://dieghernan.github.io/remote/assets/ytdefer.min.js&gt;&lt;/script&gt;</p>
 <div class="ytdefer embed-responsive embed-responsive-16by9 my-2 chulapa-rounded-lg" data-alt="some-alt-text-here" data-title="some-alt-text-here" data-src="1hXYuWTWVww"></div>
 <script>
 window.addEventListener('load', ytdefer_setup);
