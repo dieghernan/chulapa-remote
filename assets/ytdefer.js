@@ -100,9 +100,8 @@ function gen_ytdefer_clk(i) {
         var d = document;
         var el = d.getElementById("ytdefer_vid" + i);
         var vid_id = el.parentNode.getAttribute("data-src");
-        var player = new YT.Player(el.id, {
-            height: el.style.height,
-            width: el.style.width,
+        var im = d.getElementById("ytdefer_img" + i);
+        var player = new YT.Player(im.id, {
             videoId: vid_id,
             events: {
                 onReady: function (ev) {
