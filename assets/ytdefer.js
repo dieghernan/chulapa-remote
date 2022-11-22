@@ -18,11 +18,11 @@ function ytdefer_setup() {
         var h = e.clientHeight;
         var dv = d.createElement("div");
         dv.id = "ytdefer_vid" + i;
+        //dv.style.width = w + "px";
+        //dv.style.height = h + "px";
+        //dv.style.position = "relative";
+        //dv.onresize = ytdefer_resize;
         dv.classList.add('embed-responsive', 'embed-responsive-16by9', 'my-2', 'chulapa-rounded-lg');
-        dv.style.width = w + "px";
-        dv.style.height = h + "px";
-        dv.style.position = "relative";
-        dv.onresize = ytdefer_resize;
         e.appendChild(dv);
         var im = d.createElement("img");
         if (e.hasAttribute("data-alt")) {
