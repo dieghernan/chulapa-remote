@@ -7,8 +7,8 @@
 		<description>Testing a remote theme</description>
 		<language>en-US</language>
 		<copyright>(c) 2022, dieghernan</copyright>	
-		<pubDate>Tue, 22 Nov 2022 21:22:32 +0000</pubDate>
-		<lastBuildDate>Tue, 22 Nov 2022 21:22:32 +0000</lastBuildDate>
+		<pubDate>Wed, 23 Nov 2022 14:19:22 +0000</pubDate>
+		<lastBuildDate>Wed, 23 Nov 2022 14:19:22 +0000</lastBuildDate>
 		<category>blog</category>
 		<ttl>60</ttl>
 		<atom:link href="https://dieghernan.github.io/remote/rss.xml" rel="self" type="application/rss+xml" />

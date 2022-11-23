@@ -5,7 +5,7 @@
     <!--  MIT License-->
     <!-- Docs: https://dieghernan.github.io/chulapa -->
     <!-- Repo: https://github.com/dieghernan/chulapa -->
-    <!-- Page build 2022-11-22 21:22:32 +0000 -->
+    <!-- Page build 2022-11-23 14:19:22 +0000 -->
     <!--Google Structured Data-->
     <script type="application/ld+json">
         {
@@ -123,7 +123,9 @@
   <link id="csshigh" rel="stylesheet" href="https://dieghernan.github.io/remote/assets/css/highlighter.css" />
     <!-- Custom css -->
   <link rel="stylesheet" href="https://dieghernan.github.io/remote/assets/css/custom.css" />
-    <!-- start custom head snippets -->
+    <!-- Chulape Deferred (lazy) loading of YouTube videos, to improve page speed -->
+    <script src="https://dieghernan.github.io/remote/assets/js/ch_ytdefer/ch_ytdefer.min.js"></script>
+<!-- start custom head snippets -->
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
 <!-- this script is inserted after the css stylesheet -->
 <!-- end custom head snippets -->
@@ -203,9 +205,9 @@
 <p>Try change Tango Echo India 2020-01-21</p>
 <h1 id="el-quijote-en-españa">El Quijote en España</h1>
 <ul>
- <li>2022-11-22 21:22:39 UTC</li>
+ <li>2022-11-23 14:19:26 UTC</li>
 </ul>
-<p>2022-11-22 21:21:09 UTC</p>
+<p>2022-11-23 14:17:56 UTC</p>
 <p>And an inline code <code class="language-plaintext highlighter-rouge">here see how to get along with this</code></p>
 <p>Click <a href="https://github.com/dieghernan/chulapa-101/generate"><strong>Use this template</strong></a> button above for cloning this repo and get started with <a href="https://github.com/dieghernan/chulapa">Chulapa Jekyll theme</a>.</p>
 <p>Contains basic configuration to get you a site with:</p>
@@ -287,6 +289,8 @@
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
 	<script src="https://dieghernan.github.io/remote/assets/js/clipboardrouge.js"></script>
+	<!-- Chulape Deferred (lazy) loading of YouTube videos, to improve page speed -->
+	<script>window.addEventListener('load', ch_ytdefer_setup);</script>
 	<!-- start custom scripts to be placed at the bottom of the page -->
 <!-- end custom bottom scripts -->
 	</body>
