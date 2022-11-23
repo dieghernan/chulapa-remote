@@ -25,13 +25,13 @@ Just testing a video
 
 ## With other alternatives
 
-See [Lazy Loading YouTube Videos in Jekyll Posts](https://github.com/alfurka/jekyll-embed-youtube-lazy-load).
+See [Lazy Loading YouTube Videos](https://dieghernan.github.io/chulapa/docs/04-layouts#experimental-deferred-lazy-loading-of-youtube-videos).
 
 
 {% raw %}
 ```
-{% include youtube.html id='1hXYuWTWVww' %}
+{% include snippets/youtube.html id='1hXYuWTWVww' %}
 ```
 {% endraw %}
 
-{% include youtube.html id='1hXYuWTWVww' %}
+{% include snippets/youtube.html id='1hXYuWTWVww' %}
