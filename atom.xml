@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" >
 	<generator uri="https://dieghernan.github.io/chulapa" version="1.0.0">Chulapa</generator>
-	<link href="https://dieghernan.github.io/remote/atom.xml" rel="self" type="application/atom+xml" />
-	<link href="https://dieghernan.github.io/remote" rel="alternate" type="text/html" />
-	<updated>2022-11-25T17:58:01+00:00</updated>
-	<id>https://dieghernan.github.io/remote/atom.xml</id>
+	<link href="https://dieghernan.github.io/chulapa-remote/atom.xml" rel="self" type="application/atom+xml" />
+	<link href="https://dieghernan.github.io/chulapa-remote" rel="alternate" type="text/html" />
+	<updated>2022-11-26T08:09:20+00:00</updated>
+	<id>https://dieghernan.github.io/chulapa-remote/atom.xml</id>
 	<title>Remote testing</title>
 	
 	<author>
@@ -15,11 +15,11 @@
 	
 	<logo>https://github.com/dieghernan.png</logo><entry>
 		<title>Last post!</title>
-		<link href="https://dieghernan.github.io/remote/20210104_last-post/" rel="alternate" type="text/html" title="Last post!"/>
+		<link href="https://dieghernan.github.io/chulapa-remote/20210104_last-post/" rel="alternate" type="text/html" title="Last post!"/>
 		<published>2021-01-04T00:00:00+00:00</published>
 		<updated>2021-01-04T00:00:00+00:00</updated>
-		<id>https://dieghernan.github.io/remote/20210104_last-post/</id>
-		<content type="html" xml:base="https://dieghernan.github.io/remote/20210104_last-post/">
+		<id>https://dieghernan.github.io/chulapa-remote/20210104_last-post/</id>
+		<content type="html" xml:base="https://dieghernan.github.io/chulapa-remote/20210104_last-post/">
 		
   		
 	&lt;p&gt;1 min.&lt;/p&gt;
@@ -28,7 +28,7 @@
 
 &lt;p&gt;url https://dieghernan.github.io&lt;/p&gt;
 
-&lt;p&gt;baseurl remote&lt;/p&gt;
+&lt;p&gt;baseurl chulapa-remote&lt;/p&gt;
 
 		</content>
 		
@@ -42,11 +42,11 @@
 		<category term="exciting-stuff"/><category term="random"/>
 	</entry><entry>
 		<title>The Acueduct of Segovia</title>
-		<link href="https://dieghernan.github.io/remote/20191127_acueduct-of-segovia/" rel="alternate" type="text/html" title="The Acueduct of Segovia"/>
+		<link href="https://dieghernan.github.io/chulapa-remote/20191127_acueduct-of-segovia/" rel="alternate" type="text/html" title="The Acueduct of Segovia"/>
 		<published>2019-11-27T00:00:00+00:00</published>
 		<updated>2019-11-27T00:00:00+00:00</updated>
-		<id>https://dieghernan.github.io/remote/20191127_acueduct-of-segovia/</id>
-		<content type="html" xml:base="https://dieghernan.github.io/remote/20191127_acueduct-of-segovia/">
+		<id>https://dieghernan.github.io/chulapa-remote/20191127_acueduct-of-segovia/</id>
+		<content type="html" xml:base="https://dieghernan.github.io/chulapa-remote/20191127_acueduct-of-segovia/">
 		
 		&lt;h3&gt;20 centuries ago&lt;/h3&gt;
 		
@@ -67,11 +67,11 @@
 		<category term="downtown"/><category term="landscape"/><category term="project-links"/><category term="trips"/>
 	</entry><entry>
 		<title>A landing page</title>
-		<link href="https://dieghernan.github.io/remote/20190803_landing-page/" rel="alternate" type="text/html" title="A landing page"/>
+		<link href="https://dieghernan.github.io/chulapa-remote/20190803_landing-page/" rel="alternate" type="text/html" title="A landing page"/>
 		<published>2019-08-03T00:00:00+00:00</published>
 		<updated>2019-08-03T00:00:00+00:00</updated>
-		<id>https://dieghernan.github.io/remote/20190803_landing-page/</id>
-		<content type="html" xml:base="https://dieghernan.github.io/remote/20190803_landing-page/">
+		<id>https://dieghernan.github.io/chulapa-remote/20190803_landing-page/</id>
+		<content type="html" xml:base="https://dieghernan.github.io/chulapa-remote/20190803_landing-page/">
 		
 		&lt;h3&gt;With image header&lt;/h3&gt;
 		
@@ -92,11 +92,11 @@
 		<category term="demo"/><category term="example"/><category term="guest-author"/><category term="layout"/>
 	</entry><entry>
 		<title>Dean Village</title>
-		<link href="https://dieghernan.github.io/remote/20190502_dean-village/" rel="alternate" type="text/html" title="Dean Village"/>
+		<link href="https://dieghernan.github.io/chulapa-remote/20190502_dean-village/" rel="alternate" type="text/html" title="Dean Village"/>
 		<published>2019-05-02T00:00:00+00:00</published>
 		<updated>2019-05-02T00:00:00+00:00</updated>
-		<id>https://dieghernan.github.io/remote/20190502_dean-village/</id>
-		<content type="html" xml:base="https://dieghernan.github.io/remote/20190502_dean-village/">
+		<id>https://dieghernan.github.io/chulapa-remote/20190502_dean-village/</id>
+		<content type="html" xml:base="https://dieghernan.github.io/chulapa-remote/20190502_dean-village/">
 		
   		
 			&lt;img src=&#39;https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Well_Court%2C_Dean_Village%2C_Edinburgh_%2844485996381%29.jpg/800px-Well_Court%2C_Dean_Village%2C_Edinburgh_%2844485996381%29.jpg&#39; &gt;
@@ -127,11 +127,11 @@ to understand &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt
 		<category term="bootstrap"/><category term="downtown"/><category term="edinburgh"/><category term="kramdown"/><category term="landscape"/><category term="trips"/>
 	</entry><entry>
 		<title>Urban art</title>
-		<link href="https://dieghernan.github.io/remote/20181109_urban_art/" rel="alternate" type="text/html" title="Urban art"/>
+		<link href="https://dieghernan.github.io/chulapa-remote/20181109_urban_art/" rel="alternate" type="text/html" title="Urban art"/>
 		<published>2018-11-09T00:00:00+00:00</published>
 		<updated>2018-11-09T00:00:00+00:00</updated>
-		<id>https://dieghernan.github.io/remote/20181109_urban_art/</id>
-		<content type="html" xml:base="https://dieghernan.github.io/remote/20181109_urban_art/">
+		<id>https://dieghernan.github.io/chulapa-remote/20181109_urban_art/</id>
+		<content type="html" xml:base="https://dieghernan.github.io/chulapa-remote/20181109_urban_art/">
 		
 		&lt;h3&gt;Creativity is everywhere&lt;/h3&gt;
 		
@@ -157,11 +157,11 @@ to understand &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt
 		<category term="downtown"/><category term="street"/><category term="urban art"/>
 	</entry><entry>
 		<title>Flake it till you make it</title>
-		<link href="https://dieghernan.github.io/remote/20150226_flake-it-till-you-make-it/" rel="alternate" type="text/html" title="Flake it till you make it"/>
+		<link href="https://dieghernan.github.io/chulapa-remote/20150226_flake-it-till-you-make-it/" rel="alternate" type="text/html" title="Flake it till you make it"/>
 		<published>2015-02-26T00:00:00+00:00</published>
 		<updated>2018-09-21T00:00:00+00:00</updated>
-		<id>https://dieghernan.github.io/remote/20150226_flake-it-till-you-make-it/</id>
-		<content type="html" xml:base="https://dieghernan.github.io/remote/20150226_flake-it-till-you-make-it/">
+		<id>https://dieghernan.github.io/chulapa-remote/20150226_flake-it-till-you-make-it/</id>
+		<content type="html" xml:base="https://dieghernan.github.io/chulapa-remote/20150226_flake-it-till-you-make-it/">
 		
 		&lt;h3&gt;Excerpt from Soulshaping by Jeff Brown&lt;/h3&gt;
 		
@@ -187,11 +187,11 @@ to understand &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt
 		
 	</entry><entry>
 		<title>Test markdown</title>
-		<link href="https://dieghernan.github.io/remote/20150220_test-markdown/" rel="alternate" type="text/html" title="Test markdown"/>
+		<link href="https://dieghernan.github.io/chulapa-remote/20150220_test-markdown/" rel="alternate" type="text/html" title="Test markdown"/>
 		<published>2015-02-20T00:00:00+00:00</published>
 		<updated>2015-02-20T00:00:00+00:00</updated>
-		<id>https://dieghernan.github.io/remote/20150220_test-markdown/</id>
-		<content type="html" xml:base="https://dieghernan.github.io/remote/20150220_test-markdown/">
+		<id>https://dieghernan.github.io/chulapa-remote/20150220_test-markdown/</id>
+		<content type="html" xml:base="https://dieghernan.github.io/chulapa-remote/20150220_test-markdown/">
 		
 		&lt;h3&gt;Each post also has a subtitle&lt;/h3&gt;
 		
@@ -269,11 +269,11 @@ foo(3)
 		<category term="markdown"/>
 	</entry><entry>
 		<title>To be</title>
-		<link href="https://dieghernan.github.io/remote/20150213_hamlet-monologue/" rel="alternate" type="text/html" title="To be"/>
+		<link href="https://dieghernan.github.io/chulapa-remote/20150213_hamlet-monologue/" rel="alternate" type="text/html" title="To be"/>
 		<published>2015-02-13T00:00:00+00:00</published>
 		<updated>2015-02-13T00:00:00+00:00</updated>
-		<id>https://dieghernan.github.io/remote/20150213_hamlet-monologue/</id>
-		<content type="html" xml:base="https://dieghernan.github.io/remote/20150213_hamlet-monologue/">
+		<id>https://dieghernan.github.io/chulapa-remote/20150213_hamlet-monologue/</id>
+		<content type="html" xml:base="https://dieghernan.github.io/chulapa-remote/20150213_hamlet-monologue/">
 		
 		&lt;h3&gt;... or not to be?&lt;/h3&gt;
 		
@@ -360,11 +360,11 @@ Be all my sins remembered.&lt;/p&gt;
 		
 	</entry><entry>
 		<title>Dear diary</title>
-		<link href="https://dieghernan.github.io/remote/20150127_dear-diary/" rel="alternate" type="text/html" title="Dear diary"/>
+		<link href="https://dieghernan.github.io/chulapa-remote/20150127_dear-diary/" rel="alternate" type="text/html" title="Dear diary"/>
 		<published>2015-01-27T00:00:00+00:00</published>
 		<updated>2015-01-27T00:00:00+00:00</updated>
-		<id>https://dieghernan.github.io/remote/20150127_dear-diary/</id>
-		<content type="html" xml:base="https://dieghernan.github.io/remote/20150127_dear-diary/">
+		<id>https://dieghernan.github.io/chulapa-remote/20150127_dear-diary/</id>
+		<content type="html" xml:base="https://dieghernan.github.io/chulapa-remote/20150127_dear-diary/">
 		
   		
 	&lt;p&gt;1 min.&lt;/p&gt;
@@ -380,11 +380,11 @@ Be all my sins remembered.&lt;/p&gt;
 		<category term="diary"/><category term="random"/><category term="school"/>
 	</entry><entry>
 		<title>Soccer</title>
-		<link href="https://dieghernan.github.io/remote/20150119_soccer/" rel="alternate" type="text/html" title="Soccer"/>
+		<link href="https://dieghernan.github.io/chulapa-remote/20150119_soccer/" rel="alternate" type="text/html" title="Soccer"/>
 		<published>2015-01-19T00:00:00+00:00</published>
 		<updated>2015-01-19T00:00:00+00:00</updated>
-		<id>https://dieghernan.github.io/remote/20150119_soccer/</id>
-		<content type="html" xml:base="https://dieghernan.github.io/remote/20150119_soccer/">
+		<id>https://dieghernan.github.io/chulapa-remote/20150119_soccer/</id>
+		<content type="html" xml:base="https://dieghernan.github.io/chulapa-remote/20150119_soccer/">
 		
 		&lt;h3&gt;Best sport ever!&lt;/h3&gt;
 		
@@ -408,11 +408,11 @@ Be all my sins remembered.&lt;/p&gt;
 		
 	</entry><entry>
 		<title>Pirates arrrr</title>
-		<link href="https://dieghernan.github.io/remote/20150115_pirates/" rel="alternate" type="text/html" title="Pirates arrrr"/>
+		<link href="https://dieghernan.github.io/chulapa-remote/20150115_pirates/" rel="alternate" type="text/html" title="Pirates arrrr"/>
 		<published>2015-01-15T00:00:00+00:00</published>
 		<updated>2015-01-15T00:00:00+00:00</updated>
-		<id>https://dieghernan.github.io/remote/20150115_pirates/</id>
-		<content type="html" xml:base="https://dieghernan.github.io/remote/20150115_pirates/">
+		<id>https://dieghernan.github.io/chulapa-remote/20150115_pirates/</id>
+		<content type="html" xml:base="https://dieghernan.github.io/chulapa-remote/20150115_pirates/">
 		
   		
 	&lt;p&gt;1 min.&lt;/p&gt;
@@ -428,11 +428,11 @@ Be all my sins remembered.&lt;/p&gt;
 		<category term="pirates"/><category term="random"/>
 	</entry><entry>
 		<title>First post!</title>
-		<link href="https://dieghernan.github.io/remote/20150104_first-post/" rel="alternate" type="text/html" title="First post!"/>
+		<link href="https://dieghernan.github.io/chulapa-remote/20150104_first-post/" rel="alternate" type="text/html" title="First post!"/>
 		<published>2015-01-04T00:00:00+00:00</published>
 		<updated>2015-01-04T00:00:00+00:00</updated>
-		<id>https://dieghernan.github.io/remote/20150104_first-post/</id>
-		<content type="html" xml:base="https://dieghernan.github.io/remote/20150104_first-post/">
+		<id>https://dieghernan.github.io/chulapa-remote/20150104_first-post/</id>
+		<content type="html" xml:base="https://dieghernan.github.io/chulapa-remote/20150104_first-post/">
 		
   		
 	&lt;p&gt;1 min.&lt;/p&gt;
@@ -441,7 +441,7 @@ Be all my sins remembered.&lt;/p&gt;
 
 &lt;p&gt;url https://dieghernan.github.io&lt;/p&gt;
 
-&lt;p&gt;baseurl remote&lt;/p&gt;
+&lt;p&gt;baseurl chulapa-remote&lt;/p&gt;
 
 		</content>
 		

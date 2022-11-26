@@ -3,19 +3,19 @@
 	<channel>
 		<title>Remote testing | </title>
 		<generator>(c) Chulapa Jekyll Theme RSS generator</generator>
-		<link>https://dieghernan.github.io/remote</link>
+		<link>https://dieghernan.github.io/chulapa-remote</link>
 		<description>Testing a remote theme</description>
 		<language>en-US</language>
 		<copyright>(c) 2022, dieghernan</copyright>	
-		<pubDate>Fri, 25 Nov 2022 17:58:01 +0000</pubDate>
-		<lastBuildDate>Fri, 25 Nov 2022 17:58:01 +0000</lastBuildDate>
+		<pubDate>Sat, 26 Nov 2022 08:09:20 +0000</pubDate>
+		<lastBuildDate>Sat, 26 Nov 2022 08:09:20 +0000</lastBuildDate>
 		<category>blog</category>
 		<ttl>60</ttl>
-		<atom:link href="https://dieghernan.github.io/remote/rss.xml" rel="self" type="application/rss+xml" />
+		<atom:link href="https://dieghernan.github.io/chulapa-remote/rss.xml" rel="self" type="application/rss+xml" />
 		<image>
 			<title>Remote testing | </title>
 			<url>https://github.com/dieghernan.png</url>
-			<link>https://dieghernan.github.io/remote</link>
+			<link>https://dieghernan.github.io/chulapa-remote</link>
 			<description>Testing a remote theme</description>
 		</image><item>
 			<title>Last post!</title>
@@ -28,13 +28,13 @@
 
 <p>url https://dieghernan.github.io</p>
 
-<p>baseurl remote</p>
+<p>baseurl chulapa-remote</p>
 </div>
 				]]>
 			</description>
-			<link>https://dieghernan.github.io/remote/20210104_last-post/</link>
+			<link>https://dieghernan.github.io/chulapa-remote/20210104_last-post/</link>
 			<category>posts</category>
-		    <category>exciting-stuff</category><category>random</category><guid isPermaLink="true">https://dieghernan.github.io/remote/20210104_last-post/</guid>
+		    <category>exciting-stuff</category><category>random</category><guid isPermaLink="true">https://dieghernan.github.io/chulapa-remote/20210104_last-post/</guid>
       <pubDate>Mon, 04 Jan 2021 00:00:00 +0000</pubDate>
 		</item><item>
 			<title>The Acueduct of Segovia</title>
@@ -47,11 +47,11 @@
 </div>
 				]]>
 			</description>
-			<link>https://dieghernan.github.io/remote/20191127_acueduct-of-segovia/</link>
+			<link>https://dieghernan.github.io/chulapa-remote/20191127_acueduct-of-segovia/</link>
 			<category>posts</category>
 		    <category>downtown</category><category>landscape</category><category>project-links</category><category>trips</category><media:title type="html"><![CDATA[The Acueduct of Segovia ]]></media:title>
       <media:content url="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Acueducto_Segovia_noche.JPG/1024px-Acueducto_Segovia_noche.JPG" medium="image"/>
-      <media:thumbnail url="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Acueducto_Segovia_noche.JPG/1024px-Acueducto_Segovia_noche.JPG" /><guid isPermaLink="true">https://dieghernan.github.io/remote/20191127_acueduct-of-segovia/</guid>
+      <media:thumbnail url="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Acueducto_Segovia_noche.JPG/1024px-Acueducto_Segovia_noche.JPG" /><guid isPermaLink="true">https://dieghernan.github.io/chulapa-remote/20191127_acueduct-of-segovia/</guid>
       <pubDate>Wed, 27 Nov 2019 00:00:00 +0000</pubDate>
 		</item><item>
 			<title>A landing page</title>
@@ -64,11 +64,11 @@
 </div>
 				]]>
 			</description>
-			<link>https://dieghernan.github.io/remote/20190803_landing-page/</link>
+			<link>https://dieghernan.github.io/chulapa-remote/20190803_landing-page/</link>
 			<category>posts</category>
 		    <category>demo</category><category>example</category><category>guest-author</category><category>layout</category><media:title type="html"><![CDATA[A landing page ]]></media:title>
       <media:content url="https://dieghernan.github.io/chulapa/assets/img/site/transparent.png" medium="image"/>
-      <media:thumbnail url="https://dieghernan.github.io/chulapa/assets/img/site/transparent.png" /><guid isPermaLink="true">https://dieghernan.github.io/remote/20190803_landing-page/</guid>
+      <media:thumbnail url="https://dieghernan.github.io/chulapa/assets/img/site/transparent.png" /><guid isPermaLink="true">https://dieghernan.github.io/chulapa-remote/20190803_landing-page/</guid>
       <pubDate>Sat, 03 Aug 2019 00:00:00 +0000</pubDate>
 		</item><item>
 			<title>Dean Village</title>
@@ -88,11 +88,11 @@ to understand <code class="language-plaintext highlighter-rouge">.blockquote-foo
 </div>
 				]]>
 			</description>
-			<link>https://dieghernan.github.io/remote/20190502_dean-village/</link>
+			<link>https://dieghernan.github.io/chulapa-remote/20190502_dean-village/</link>
 			<category>posts</category>
 		    <category>bootstrap</category><category>downtown</category><category>edinburgh</category><category>kramdown</category><category>landscape</category><category>trips</category><media:title type="html"><![CDATA[Dean Village ]]></media:title>
       <media:content url="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Well_Court%2C_Dean_Village%2C_Edinburgh_%2844485996381%29.jpg/800px-Well_Court%2C_Dean_Village%2C_Edinburgh_%2844485996381%29.jpg" medium="image"/>
-      <media:thumbnail url="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Well_Court%2C_Dean_Village%2C_Edinburgh_%2844485996381%29.jpg/800px-Well_Court%2C_Dean_Village%2C_Edinburgh_%2844485996381%29.jpg" /><guid isPermaLink="true">https://dieghernan.github.io/remote/20190502_dean-village/</guid>
+      <media:thumbnail url="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Well_Court%2C_Dean_Village%2C_Edinburgh_%2844485996381%29.jpg/800px-Well_Court%2C_Dean_Village%2C_Edinburgh_%2844485996381%29.jpg" /><guid isPermaLink="true">https://dieghernan.github.io/chulapa-remote/20190502_dean-village/</guid>
       <pubDate>Thu, 02 May 2019 00:00:00 +0000</pubDate>
 		</item><item>
 			<title>Urban art</title>
@@ -109,11 +109,11 @@ to understand <code class="language-plaintext highlighter-rouge">.blockquote-foo
 </div>
 				]]>
 			</description>
-			<link>https://dieghernan.github.io/remote/20181109_urban_art/</link>
+			<link>https://dieghernan.github.io/chulapa-remote/20181109_urban_art/</link>
 			<category>posts</category>
 		    <category>downtown</category><category>street</category><category>urban art</category><media:title type="html"><![CDATA[Urban art ]]></media:title>
       <media:content url="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Madrid_-_Graffiti_11.jpg/407px-Madrid_-_Graffiti_11.jpg" medium="image"/>
-      <media:thumbnail url="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Madrid_-_Graffiti_11.jpg/407px-Madrid_-_Graffiti_11.jpg" /><guid isPermaLink="true">https://dieghernan.github.io/remote/20181109_urban_art/</guid>
+      <media:thumbnail url="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Madrid_-_Graffiti_11.jpg/407px-Madrid_-_Graffiti_11.jpg" /><guid isPermaLink="true">https://dieghernan.github.io/chulapa-remote/20181109_urban_art/</guid>
       <pubDate>Fri, 09 Nov 2018 00:00:00 +0000</pubDate>
 		</item><item>
 			<title>Flake it till you make it</title>
@@ -132,9 +132,9 @@ to understand <code class="language-plaintext highlighter-rouge">.blockquote-foo
 </div>
 				]]>
 			</description>
-			<link>https://dieghernan.github.io/remote/20150226_flake-it-till-you-make-it/</link>
+			<link>https://dieghernan.github.io/chulapa-remote/20150226_flake-it-till-you-make-it/</link>
 			<category>posts</category>
-		    <guid isPermaLink="true">https://dieghernan.github.io/remote/20150226_flake-it-till-you-make-it/</guid>
+		    <guid isPermaLink="true">https://dieghernan.github.io/chulapa-remote/20150226_flake-it-till-you-make-it/</guid>
       <pubDate>Thu, 26 Feb 2015 00:00:00 +0000</pubDate>
 		</item><item>
 			<title>Test markdown</title>
@@ -205,9 +205,9 @@ foo(3)
 </div>
 				]]>
 			</description>
-			<link>https://dieghernan.github.io/remote/20150220_test-markdown/</link>
+			<link>https://dieghernan.github.io/chulapa-remote/20150220_test-markdown/</link>
 			<category>posts</category>
-		    <category>markdown</category><guid isPermaLink="true">https://dieghernan.github.io/remote/20150220_test-markdown/</guid>
+		    <category>markdown</category><guid isPermaLink="true">https://dieghernan.github.io/chulapa-remote/20150220_test-markdown/</guid>
       <pubDate>Fri, 20 Feb 2015 00:00:00 +0000</pubDate>
 		</item><item>
 			<title>To be</title>
@@ -254,9 +254,9 @@ Be all my sins remembered.</p>
 </div>
 				]]>
 			</description>
-			<link>https://dieghernan.github.io/remote/20150213_hamlet-monologue/</link>
+			<link>https://dieghernan.github.io/chulapa-remote/20150213_hamlet-monologue/</link>
 			<category>posts</category>
-		    <guid isPermaLink="true">https://dieghernan.github.io/remote/20150213_hamlet-monologue/</guid>
+		    <guid isPermaLink="true">https://dieghernan.github.io/chulapa-remote/20150213_hamlet-monologue/</guid>
       <pubDate>Fri, 13 Feb 2015 00:00:00 +0000</pubDate>
 		</item><item>
 			<title>Dear diary</title>
@@ -268,9 +268,9 @@ Be all my sins remembered.</p>
 </div>
 				]]>
 			</description>
-			<link>https://dieghernan.github.io/remote/20150127_dear-diary/</link>
+			<link>https://dieghernan.github.io/chulapa-remote/20150127_dear-diary/</link>
 			<category>posts</category>
-		    <category>diary</category><category>random</category><category>school</category><guid isPermaLink="true">https://dieghernan.github.io/remote/20150127_dear-diary/</guid>
+		    <category>diary</category><category>random</category><category>school</category><guid isPermaLink="true">https://dieghernan.github.io/chulapa-remote/20150127_dear-diary/</guid>
       <pubDate>Tue, 27 Jan 2015 00:00:00 +0000</pubDate>
 		</item><item>
 			<title>Soccer</title>
@@ -287,9 +287,9 @@ Be all my sins remembered.</p>
 </div>
 				]]>
 			</description>
-			<link>https://dieghernan.github.io/remote/20150119_soccer/</link>
+			<link>https://dieghernan.github.io/chulapa-remote/20150119_soccer/</link>
 			<category>posts</category>
-		    <guid isPermaLink="true">https://dieghernan.github.io/remote/20150119_soccer/</guid>
+		    <guid isPermaLink="true">https://dieghernan.github.io/chulapa-remote/20150119_soccer/</guid>
       <pubDate>Mon, 19 Jan 2015 00:00:00 +0000</pubDate>
 		</item><item>
 			<title>Pirates arrrr</title>
@@ -301,9 +301,9 @@ Be all my sins remembered.</p>
 </div>
 				]]>
 			</description>
-			<link>https://dieghernan.github.io/remote/20150115_pirates/</link>
+			<link>https://dieghernan.github.io/chulapa-remote/20150115_pirates/</link>
 			<category>posts</category>
-		    <category>pirates</category><category>random</category><guid isPermaLink="true">https://dieghernan.github.io/remote/20150115_pirates/</guid>
+		    <category>pirates</category><category>random</category><guid isPermaLink="true">https://dieghernan.github.io/chulapa-remote/20150115_pirates/</guid>
       <pubDate>Thu, 15 Jan 2015 00:00:00 +0000</pubDate>
 		</item><item>
 			<title>First post!</title>
@@ -316,13 +316,13 @@ Be all my sins remembered.</p>
 
 <p>url https://dieghernan.github.io</p>
 
-<p>baseurl remote</p>
+<p>baseurl chulapa-remote</p>
 </div>
 				]]>
 			</description>
-			<link>https://dieghernan.github.io/remote/20150104_first-post/</link>
+			<link>https://dieghernan.github.io/chulapa-remote/20150104_first-post/</link>
 			<category>posts</category>
-		    <category>exciting-stuff</category><category>random</category><guid isPermaLink="true">https://dieghernan.github.io/remote/20150104_first-post/</guid>
+		    <category>exciting-stuff</category><category>random</category><guid isPermaLink="true">https://dieghernan.github.io/chulapa-remote/20150104_first-post/</guid>
       <pubDate>Sun, 04 Jan 2015 00:00:00 +0000</pubDate>
 		</item></channel>
 </rss>
