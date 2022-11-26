@@ -32,14 +32,14 @@ show_comments     : true
 show_author       : true
 ---
 
-```
+
 {% if site.chulapa-skin.skin %}
 
 
   {{ site.chulapa-skin.skin }}
-  {% assign thisskin = site.data.skin[site.chulapa-skin.skin] %}
+  {% assign thisskin = site.data.skins[site.chulapa-skin.skin] %}
   
-{{ thisskin.name }}
+<p>{{ thisskin.name }}
 
  
 {% endif %}
