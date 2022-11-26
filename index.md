@@ -35,12 +35,13 @@ show_author       : true
 ```
 {% if site.chulapa-skin.skin %}
 
-  {% assign skin = site.data.skin[site.chulapa-skin.skin] %}
-  
-  <p>{{ skin.name }}
-  <p>{{ skin.author }}
-  <p>{{ skin.url }}
 
+  {{ site.chulapa-skin.skin }}
+  {% assign thisskin = site.data.skin[site.chulapa-skin.skin] %}
+  
+{{ thisskin.name }}
+
+ 
 {% endif %}
 
 Try change Tango Echo India 2020-01-21
