@@ -31,6 +31,7 @@ show_bottomnavs   : true
 show_comments     : true
 show_author       : true
 ---
+```
 
 
 {% if site.chulapa-skin.skin %}
