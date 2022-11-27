@@ -62,6 +62,8 @@ $(document).ready(function() {
 						
     // Insert copy buttons between pre  and code on Rouge:
 	$(copyButton).prependTo("pre.highlight");
+	$(copyButton).prependTo("figure.highlight pre:first-child");
+	
 
 });
 
