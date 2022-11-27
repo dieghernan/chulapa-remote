@@ -45,6 +45,16 @@ show_author       : true
  
 {% endif %}
 
+<p>
+</p>
+
+
+{%- assign urlslice = "http:hagas" | slice: 0,3 -%}
+
+{{ urlslice }}
+
+<p>
+
 Try change Tango Echo India 2020-01-21
 
 # El Quijote en España
