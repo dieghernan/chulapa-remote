@@ -4,18 +4,6 @@ permalink: /gallery
 ---
 
 
-Solution:
-
-.d-block.w-100 { height:100vh; width:auto; object-fit:cover; }
-
-<style>
-
-.chulapa-carousel {
-  height: 75vh;
-  object-fit:contain;
-}
-
-</style>
 
 {% assign externalgallery = "
 https://via.placeholder.com/600x1200,
