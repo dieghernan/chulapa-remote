@@ -145,7 +145,7 @@ footer:
 
 # Theme and colors
 chulapa-skin:
-  skin: twitter-lights-out
+  skin: twitter-dim
   highlight     :  emacs #default["default"]
    # Optional predefined skins
   autothemer    :  true # Bool: Use autotheming
