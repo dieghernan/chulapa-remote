@@ -39,7 +39,10 @@ pre code {
 }
 
 
-.chulapaDateSocial {
-  color: #1da1f2;
+.chulapaDateSocial time, .chulapaDateSocial .chulapa-text-line-through {
   font-family: 'Roboto Mono', monospace;
+}
+
+.chulapaDateSocial a{
+  color: #1da1f2;
 }
