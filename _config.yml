@@ -145,10 +145,15 @@ footer:
 
 # Theme and colors
 chulapa-skin:
-  skin: twitter-dim
+  skin: twitter
   highlight     :  emacs #default["default"]
    # Optional predefined skins
   autothemer    :  true # Bool: Use autotheming
+  vars:
+    font-family-base: 'Mona Sans', Roboto
+    navbar-chulapa-bg-color: black
+    headings-font-family: 'Hubot Sans', Roboto
+    
   
 
 # D. Jekyll Defaults and collections: see https://jekyllrb.com/
