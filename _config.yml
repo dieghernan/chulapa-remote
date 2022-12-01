@@ -1,4 +1,4 @@
-remote_theme: dieghernan/chulapa
+remote_theme: dieghernan/chulapa@dev
 
 repository: dieghernan/chulapa-remote
 url: https://dieghernan.github.io
