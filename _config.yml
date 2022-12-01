@@ -150,9 +150,9 @@ chulapa-skin:
    # Optional predefined skins
   autothemer    :  true # Bool: Use autotheming
   vars:
-    font-family-base: 'Mona Sans', Roboto
+    font-family-base: "'Mona Sans', Roboto"
     navbar-chulapa-bg-color: black
-    headings-font-family: 'Hubot Sans', Roboto
+    headings-font-family: "'Hubot Sans', Roboto"
     
   
 
