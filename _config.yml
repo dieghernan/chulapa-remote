@@ -145,22 +145,8 @@ googlefonts:
  - url: "https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
 # Theme and colors
 chulapa-skin:
-  skin: twitter
-  highlight     :  emacs #default["default"]
-   # Optional predefined skins
-  autothemer    :  false # Bool: Use autotheming
-  vars:
-    headings-font-family: "'Mona Sans', Roboto"
-    font-family-base: "'Hubot Sans', Roboto"
-    font-family-monospace: "'Roboto Mono', monospace"
-    navbar-chulapa-bg-color: black 
-    navbar-chulapa-toggler-border-color: black
-    navbar-chulapa-text-color: white
-    navbar-chulapa-brand-color: white
-    footer-chulapa-text-color: white
-    headings-font-weight: 800;
-    
-
+  skin: github
+  
 # D. Jekyll Defaults and collections: see https://jekyllrb.com/
 
 # Blog pagination: on this site /blog/index.html. https://jekyllrb.com/docs/pagination/
