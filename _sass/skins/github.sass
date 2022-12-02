@@ -33,12 +33,12 @@
 		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
 	}
 
-	@font-face {
-		font-family: quote($name);
-		font-stretch: $stretch;
-		font-weight: $weight;
-		src: $src;
-	}
+@font-face {
+  font-family: quote($name);
+  font-stretch: $stretch;
+  font-weight: $weight;
+  src: $src;
+}
 }
 
 @include font-face("Mona Sans", 
