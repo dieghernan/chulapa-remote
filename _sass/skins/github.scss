@@ -57,7 +57,7 @@ $footer-chulapa-icon-hover-color: mix($footer-chulapa-hover-color, $footer-chula
 $blockquote-chulapa-bg-color: $body-bg;
 $blockquote-chulapa-text-color: $body-color;
 
-$pre-chulapa-bg-color: darken($blockquote-chulapa-bg-color, 5%);
+$pre-chulapa-bg-color: #eff2ff;
 
 
 // Special rules
@@ -82,3 +82,17 @@ blockquote {
 
 $pagination-chulapa-bg-hover-color: $primary;
 $min-contrast-ratio: 2;
+
+
+.hero-chulapa h1, 
+.hero-chulapa-image h1, 
+.splash-chulapa h1, 
+.splash-chulapa-image h1 {
+  font-family: $headings-font-family;
+  font-weight: $$headings-font-weight !important;
+}
+
+.navbar, .navbar-chulapa-fab, .navbar-chulapa, .footer-chulapa {
+  font-family: $headings-font-family;
+  font-weight: $$headings-font-weight;
+}
