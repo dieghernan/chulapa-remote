@@ -1,53 +1,21 @@
-/* Start here */
-
-@function str-replace($string, $search, $replace: "") {
-	$index: str-index($string, $search);
-
-	@if $index {
-		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
-	}
-
-	@return $string;
+@font-face {
+  font-family: 'Mona Sans';
+  src:
+    url('https://cdn.jsdelivr.net/gh/dieghernan/chulapa@master/assets/fonts/Mona-Sans/Mona-Sans.woff2') format('woff2 supports variations'),
+    url('https://cdn.jsdelivr.net/gh/dieghernan/chulapa@master/assets/fonts/Mona-Sans/Mona-Sans.woff2') format('woff2-variations');
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
 }
 
-// =============================================================================
-// Font Face
-// =============================================================================
-
-@mixin font-face($name, $path, $weight: null, $stretch: null, $exts: eot woff2 woff ttf svg) {
-	$src: null;
-
-	$extmods: (
-		eot: "?",
-		svg: "#" + str-replace($name, " ", "_")
-	);
-
-	$formats: (
-		otf: "opentype",
-		ttf: "truetype"
-	);
-
-	@each $ext in $exts {
-		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
-		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
-		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
-	}
 
 @font-face {
-  font-family: quote($name);
-  font-stretch: $stretch;
-  font-weight: $weight;
-  src: $src;
+  font-family: 'Hubot Sans';
+  src:
+    url('https://cdn.jsdelivr.net/gh/dieghernan/chulapa@master/assets/fonts/Hubot-Sans/Hubot-Sans.woff2') format('woff2 supports variations'),
+    url('https://cdn.jsdelivr.net/gh/dieghernan/chulapa@master/assets/fonts/Hubot-Sans/Hubot-Sans.woff2') format('woff2-variations');
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
 }
-}
-
-@include font-face("Mona Sans", 
-"https://cdn.jsdelivr.net/gh/dieghernan/chulapa@master/assets/fonts/Mona-Sans/Mona-Sans.woff2",
-200 900, 75% 125%, woff2-variations woff2-variations);
-
-@include font-face("Hubot Sans", 
-"https://cdn.jsdelivr.net/gh/dieghernan/chulapa@master/assets/fonts/Hubot-Sans/Hubot-Sans.woff2",
-200 900, 75% 125%, woff2-variations woff2-variations);
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 
@@ -108,8 +76,8 @@ time {
 }
 
 blockquote {
-    border-radius: 0;
-    border-left: solid $link-color;
+    border-radius: 0 !important;
+    border-left: solid $link-color !important;
 }
 
 $pagination-chulapa-bg-hover-color: $primary;
