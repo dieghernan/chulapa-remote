@@ -92,7 +92,18 @@ $min-contrast-ratio: 2;
   font-weight: $headings-font-weight !important;
 }
 
-nav, .navbar, .navbar-chulapa-fab, .navbar-chulapa, .footer-chulapa {
+nav, .navbar, .navbar-chulapa-fab .nav-item, .navbar-chulapa, .footer-chulapa {
   font-family: $headings-font-family;
-  font-weight: $headings-font-weight;
+  font-weight: $headings-font-weight  !important;
+}
+
+
+
+.navbar-chulapa .active, .navbar-chulapa-fab .active {
+color: mix($navbar-chulapa-text-color, $navbar-chulapa-bg-color, 80%) !important;
+}
+
+
+.chulapa-links-hover-only i {
+  color:$link-color;
 }

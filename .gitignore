@@ -4,3 +4,5 @@
 .Ruserdata
 project.Rproj
 remote.Rproj
+Gemfile.lock
+_site/*
