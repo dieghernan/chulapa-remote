@@ -89,10 +89,10 @@ $min-contrast-ratio: 2;
 .splash-chulapa h1, 
 .splash-chulapa-image h1 {
   font-family: $headings-font-family;
-  font-weight: $$headings-font-weight !important;
+  font-weight: $headings-font-weight !important;
 }
 
-.navbar, .navbar-chulapa-fab, .navbar-chulapa, .footer-chulapa {
+nav, .navbar, .navbar-chulapa-fab, .navbar-chulapa, .footer-chulapa {
   font-family: $headings-font-family;
-  font-weight: $$headings-font-weight;
+  font-weight: $headings-font-weight;
 }
