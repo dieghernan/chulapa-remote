@@ -142,10 +142,9 @@ footer:
 # Google Fonts https://fonts.google.com/, add as many as you need
 
 googlefonts:
- - url: "https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap"
 # Theme and colors
 chulapa-skin:
-  skin: github
+  skin: github-dark
   
 # D. Jekyll Defaults and collections: see https://jekyllrb.com/
 
