@@ -158,6 +158,7 @@ chulapa-skin:
     navbar-chulapa-text-color: white
     navbar-chulapa-brand-color: white
     footer-chulapa-text-color: white
+    headings-font-weight: 800;
     
 
 # D. Jekyll Defaults and collections: see https://jekyllrb.com/
