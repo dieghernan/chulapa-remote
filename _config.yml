@@ -148,7 +148,7 @@ chulapa-skin:
   skin: twitter
   highlight     :  emacs #default["default"]
    # Optional predefined skins
-  autothemer    :  true # Bool: Use autotheming
+  autothemer    :  false # Bool: Use autotheming
   vars:
     headings-font-family: "'Mona Sans', Roboto"
     font-family-base: "'Hubot Sans', Roboto"
