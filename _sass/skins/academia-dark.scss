@@ -13,14 +13,14 @@ $body-color: #f8f8f2;
 $success: #1EA568;
 $info: #139BD1;
 $danger: #FF516A;
+  
 
-$pre-chulapa-bg-color: lighten($body-bg, 30%) !default;
+$pre-chulapa-bg-color: lighten($body-bg, 70%) !default;
 
 $navbar-chulapa-bg-color: $body-bg;
 $navbar-chulapa-active-color: #598EF7;
 $footer-chulapa-icon-color: #1F93FC;
 $footer-chulapa-icon-hover-color: transparent;
-$code-color: #E80E61;
 $h1-font-size: 2.25rem;
 $h2-font-size: 1.5rem;
 $h3-font-size: 1.25rem;
@@ -46,6 +46,7 @@ $h6-font-size: 1rem;
 @import "bootstrap/functions";
 @import "bootstrap/variables";
 
+$code-color: #F15A95 $default;
 $link-hover-color:darken($link-color, 20%);
 $table-accent-bg: rgba($white, .05);
 $table-hover-bg:rgba($white, .075);
