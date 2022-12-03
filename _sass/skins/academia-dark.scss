@@ -15,7 +15,7 @@ $info: #139BD1;
 $danger: #FF516A;
   
 
-$pre-chulapa-bg-color: darken($white, 30%) !default;
+$pre-chulapa-bg-color: lighten($body-bg, 75%) !default;
 
 $navbar-chulapa-bg-color: $body-bg;
 $navbar-chulapa-active-color: #598EF7;
@@ -46,7 +46,7 @@ $h6-font-size: 1rem;
 @import "bootstrap/functions";
 @import "bootstrap/variables";
 
-$code-color: #F15A95 $default;
+$code-color: #F15A95 !default;
 $link-hover-color:darken($link-color, 20%);
 $table-accent-bg: rgba($white, .05);
 $table-hover-bg:rgba($white, .075);
