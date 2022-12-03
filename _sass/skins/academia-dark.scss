@@ -40,13 +40,13 @@ $h6-font-size: 1rem;
 
 // Lines for dark themes
 
+$code-color: #F15A95 !default;
 /*! Import Autothemer */
 @import "skins/auto";
 /*! Import Bootstrap 4 vars */
 @import "bootstrap/functions";
 @import "bootstrap/variables";
 
-$code-color: #F15A95 !default;
 $link-hover-color:darken($link-color, 20%);
 $table-accent-bg: rgba($white, .05);
 $table-hover-bg:rgba($white, .075);
