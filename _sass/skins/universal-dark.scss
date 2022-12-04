@@ -4,25 +4,24 @@
 $font-family-base: "Roboto" !default;
 $font-family-monospace: "Roboto Mono" !default;
 $headings-font-weight: 700 !default;
-$body-bg: #000 !default;
-$body-color: #fff !default;
+$body-bg: rgb(40, 42, 54);
+$body-color: rgb(248, 248, 242);
 $primary: #986dbd !default;
 $green: #97bf13 !default;
 $red: #dc3545 !default;
 $orange: #fd7e14 !default;
 $yellow: #ffc107 !default;
-$code-color: #E80E61 !default;
-$headings-color: #333 !default;
+$headings-color: darken($body-color, 5%) !default;
 $link-color: #986dbd !default;
-$navbar-chulapa-brand-color: #000 !default;
-$navbar-chulapa-bg-color: white !default;
-$navbar-chulapa-toggler-color: #986dbd !default;
-$navbar-chulapa-active-color: #986dbd !default;
-$hero-chulapa-bg-color: #986dbd !default;
-$hero-chulapa-text-color: black !default;
-$footer-chulapa-bg-color: #333 !default;
-$footer-chulapa-text-color: #ccc !default;
-$footer-chulapa-icon-color: #ccc !default;
+$navbar-chulapa-brand-color: $body-color !default;
+$navbar-chulapa-bg-color: $body-bg !default;
+$navbar-chulapa-toggler-color: $primary !default;
+$navbar-chulapa-active-color: $primary !default;
+$hero-chulapa-bg-color: $body-bg !default;
+$hero-chulapa-text-color: $body-color !default;
+$footer-chulapa-bg-color: $body-bg !default;
+$footer-chulapa-text-color: $headings-color !default;
+$footer-chulapa-icon-color: $headings-color !default;
 $footer-chulapa-icon-hover-color: #724599 !default;
 
 // Lines for dark themes
@@ -37,16 +36,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .splash-chulapa, .hero-chulapa, .header-chulapa {
-  color: black;
+  color: $body-bg;
 }
 
 .header-chulapa {
   text-align: center;
 }
 
-.chulapa-bg-landingpage header {
-  color: black !important;
-}
 
 // Remove rules
 header hr {
@@ -67,7 +63,6 @@ header hr {
      text-transform: uppercase;
      text-decoration: underline;
      letter-spacing: 0.08em;
-     color: black;
    }
 }
 
