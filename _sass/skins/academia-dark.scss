@@ -15,7 +15,8 @@ $info: #139BD1;
 $danger: #FF516A;
   
 
-$pre-chulapa-bg-color: $white !default;
+$pre-chulapa-bg-color: mix(white, $primary, 95%);
+
 
 $navbar-chulapa-bg-color: $body-bg;
 $navbar-chulapa-active-color: #598EF7;
