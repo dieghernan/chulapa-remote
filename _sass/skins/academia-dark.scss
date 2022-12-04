@@ -9,13 +9,13 @@ $font-family-monospace: Roboto Mono, monospace;
 $white: white;
 $primary: #1F93FC;
 $body-bg: rgb(40, 42, 54);
-$body-color: #f8f8f2;
+$body-color: rgb(248, 248, 242);
 $success: #1EA568;
 $info: #139BD1;
 $danger: #FF516A;
   
 
-$pre-chulapa-bg-color: lighten($body-bg, 75%) !default;
+$pre-chulapa-bg-color: $white !default;
 
 $navbar-chulapa-bg-color: $body-bg;
 $navbar-chulapa-active-color: #598EF7;
