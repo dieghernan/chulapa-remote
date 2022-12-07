@@ -3,7 +3,7 @@ title: A guest author
 subtitle: And with a new project
 categories: [demo, author-guest]
 header_type: splash
-tags: [layout-default,header-splash, social-links, tags, categories, bottom-navs, date, comments, project-links, author, author-guest]
+tags: [header-splash, demo, example ]
 date: 2020-02-29
 show_date         : true
 show_sociallinks  : true
