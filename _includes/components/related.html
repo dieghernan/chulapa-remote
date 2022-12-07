@@ -20,7 +20,13 @@
 
 {%- if groupurl -%}
   {% for id in groupurl limit:3 %}
-    {% assign document = alldocs | where_exp: "item", "item.id == id.name" %}
+    {% assign document = site.documents | where_exp: "item", "item.id == id.name" %}
+    <p> {{ id.name }}
+    
+    
+    {{ document | inspect }}
+    
+    
     {%- if forloop.first -%}
 <div class="container-lg">
   <div class="row">
