@@ -19,13 +19,13 @@
 <div class="container-lg">
   <div class="row">
     <div class="col-lg-8 offset-lg-2">
-      <h5><i class="fa-solid fa-eye"></i></h5>
-      <hr/ class="bg-light">
+      <h5><i class="fa-solid fa-eye"><span class="sr-only">Featured</span></i></h5>
       <div class="card-group">
-    {%- endif -%}
+    {%- endif %}
+         <div class="card">
           <div class="card-body">
           <h6 class="card-title"><a href="{{ document.url | absolute_url }}" class="chulapa-text-body-color">{{ document.title }}</a></h6>
-          {%- if document.subtitle -%}<p class="card-text">{{- document.subtitle -}}</p> {%- endif -%}
+          {% if document.subtitle %}<p class="card-text">{{- document.subtitle -}}</p> {%- endif -%}
     </div>
     {% if document.date %}
     {% assign dateformat = document.date | date: "%B %d, %Y" %}
@@ -34,8 +34,6 @@
     </div>
     {% endif %}
   </div>
-      
-      
     {%- if forloop.last -%}
     </div>
     </div>
