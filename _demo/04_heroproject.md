@@ -75,7 +75,7 @@ project_links:
 {%- endfor -%}
 
 
-{% assign groupurl =  alldocs | map: 'url' | join: ','  | split: ','   %}
+{% assign groupurl =  relateddocs | map: 'url' | join: ','  | split: ','   %}
 
 
 {{ groupurl }}
