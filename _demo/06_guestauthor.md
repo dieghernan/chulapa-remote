@@ -68,15 +68,16 @@ author:
       icon: "fab fa-linkedin"
 ---
 ```
+
+
 {%- for tag in page.tags %}
   {%- if forloop.first -%}
     {%- assign alldocs = site.documents | 
-                    where_exp: "item", "item.tag contains tag" -%}
+                    where_exp: "item", "item.tags contains tag" -%}
                     
-                    {{ alldocs | inspect }}
   {%- else -%}
     {%- assign docloop = site.documents | 
-                    where_exp: "item", "item.collection contains tag" -%}
+                    where_exp: "item", "item.tags contains tag" -%}
     {%- assign alldocs = alldocs | concat: docloop %}
   {%- endif -%}
 {%- endfor -%}
