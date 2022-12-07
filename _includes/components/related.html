@@ -18,6 +18,12 @@
 
 {% assign groupurl =  relateddocs | concat: thiscol | map: 'url' | join: ','  | split: ',' | group_by: url | sort: 'size' | reverse  %}
 
+{{ groupurl }}
+
+{% for url in groupurl limit:3 %}
+  <p> {{ url }}
+{%- endfor -%}
+
 {%- if groupurl -%}
   {% for url in groupurl limit:3 %}
     {%- if forloop.first -%}
