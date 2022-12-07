@@ -1,0 +1,44 @@
+{% assign thiscol = site.documents | where_exp: "item", "item.collection == page.collection"  %}
+
+{%- for tag in page.tags %}
+  {%- if forloop.first -%}
+    {%- assign relateddocs = thiscol | 
+                    where_exp: "item", "item.tags contains tag" -%}
+                    
+  {%- else -%}
+    {%- assign docloop = thiscol | 
+                    where_exp: "item", "item.tags contains tag" -%}
+    {%- assign relateddocs = relateddocs | concat: docloop | uniq %}
+  {%- endif -%}
+{%- endfor -%}
+
+{%- assign related = alldocs | where_exp: "item", "item.url != page.url"
+| sort: 'date' | reverse %}
+
+{%- if related -%}
+<div class="container-lg">
+<div class="row">
+	<div class="col-lg-8 offset-lg-2">
+	<h5> Related posts </h5>
+	<hr/ class="bg-light">
+{% for document in related limit:3 %}
+		<div class="row my-3">
+			<article class="col">
+				<h6 class="my-4"><a href="{{- document.url | absolute_url -}}" class="chulapa-text-body-color">{{ document.title }}</a></h6>
+			</article>
+			{%- if document.header_img  -%}
+			<a href="{{- document.url | absolute_url -}}" class="col-2 ml-2 btn chulapa-overlay-img chulapa-gradient" style="background-image: url('{{ document.header_img | absolute_url }}')"></a>
+			{%- endif -%}
+		</div>	
+
+
+{%- endfor -%}
+
+</div>
+</div>
+</div>
+
+{%- endif -%}
+
+
+

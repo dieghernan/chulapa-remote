@@ -3,7 +3,7 @@ title: A guest author
 subtitle: And with a new project
 categories: [demo, author-guest]
 header_type: splash
-tags: [example, demo, header-post ]
+tags: [layout-default,header-splash, social-links, tags, categories, bottom-navs, date, comments, project-links, author, author-guest]
 date: 2020-02-29
 show_date         : true
 show_sociallinks  : true
@@ -69,25 +69,4 @@ author:
 ---
 ```
 
-
-{%- for tag in page.tags %}
-  {%- if forloop.first -%}
-    {%- assign alldocs = site.documents | 
-                    where_exp: "item", "item.tags contains tag" -%}
-                    
-  {%- else -%}
-    {%- assign docloop = site.documents | 
-                    where_exp: "item", "item.tags contains tag" -%}
-    {%- assign alldocs = alldocs | concat: docloop %}
-  {%- endif -%}
-{%- endfor -%}
-
-{%- assign alldocs = alldocs | uniq | where_exp: "item", "item.url != page.url" %}
-
-{% for document in alldocs %}
-  <p> {{ document.title }}
-  {% for dtag in document.tags %}
-    <small>{{ dtag }}</small>
-  {%- endfor -%}
-{%- endfor -%}
 
