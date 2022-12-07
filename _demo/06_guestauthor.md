@@ -69,22 +69,22 @@ author:
 ---
 ```
 {%- for tag in page.tags %}
-    {%- if forloop.first -%}
-      {%- assign alldocs = site.documents | 
-                          where_exp: "item", "item.tag contains tag" -%}
-    {%- else -%}
-      {%- assign docloop = site.documents | 
-                          where_exp: "item", "item.collection contains tag" -%}
-      {%- assign alldocs = alldocs | concat: docloop %}
-    {%- endif -%}
-  {%- endfor -%}
-{% endfor -%}
+  {%- if forloop.first -%}
+    {%- assign alldocs = site.documents | 
+                    where_exp: "item", "item.tag contains tag" -%}
+  {%- else -%}
+    {%- assign docloop = site.documents | 
+                    where_exp: "item", "item.collection contains tag" -%}
+    {%- assign alldocs = alldocs | concat: docloop %}
+  {%- endif -%}
+{%- endfor -%}
+
 
 
 {% for document in alldocs %}
   <p> {{ document.title }}
-  {% for tag in document.tag %}
-  <small>{{ tag }}</small>
-  {% endfor %}
-{% endfor %}
+  {% for dtag in document.tag %}
+    <small>{{ dtag }}</small>
+  {%- endfor -%}
+{%- endfor -%}
 
