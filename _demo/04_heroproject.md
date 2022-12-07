@@ -57,3 +57,25 @@ project_links:
       label: Example
 ---
 ```
+
+
+{% assign thiscol = site.documents | where_exp: "item", "item.collection == page.collection" | where_exp: "item", "item.url != page.url"  %}
+
+
+{%- for tag in page.tags %}
+  {%- if forloop.first -%}
+    {%- assign relateddocs = thiscol | 
+                    where_exp: "item", "item.tags contains tag" -%}
+                    
+  {%- else -%}
+    {%- assign docloop = thiscol | 
+                    where_exp: "item", "item.tags contains tag" -%}
+    {%- assign relateddocs = relateddocs | concat: docloop  %}
+  {%- endif -%}
+{%- endfor -%}
+
+
+{% assign groupurl =  alldocs | map: 'url' | join: ','  | split: ','   %}
+
+
+{{ groupurl }}
