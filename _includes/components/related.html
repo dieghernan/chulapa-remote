@@ -20,13 +20,7 @@
 
 {%- if groupurl -%}
   {% for id in groupurl limit:3 %}
-    {% assign document = site.documents | where_exp: "item", "item.id == id.name" %}
-    <p> {{ id.name }}
-    
-    
-    {{ document  }}
-    
-    
+    {% assign areldoc = site.documents | where_exp: "item", "item.id == id.name" %}
     {%- if forloop.first -%}
 <div class="container-lg">
   <div class="row">
@@ -35,6 +29,7 @@
       <h5><i class="fa-solid fa-eye"><span class="sr-only">Featured</span></i></h5>
       <div class="card-group">
     {%- endif %}
+       {% for document in areldoc limit: 1 %}
          <div class="card">
           <div class="card-body">
           <h6 class="card-title"><a href="{{ document.url | absolute_url }}" class="chulapa-text-body-color">{{ document.title }}</a></h6>
@@ -47,6 +42,7 @@
     </div>
     {% endif %}
   </div>
+        {% endfor %}
     {%- if forloop.last -%}
     </div>
     </div>
