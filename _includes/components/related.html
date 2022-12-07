@@ -19,18 +19,25 @@
 <div class="container-lg">
   <div class="row">
     <div class="col-lg-8 offset-lg-2">
-      <h5> Related posts </h5>
+      <h5><i class="fa-solid fa-eye"></i></h5>
       <hr/ class="bg-light">
+      <div class="card-group">
     {%- endif -%}
-      <div class="row my-3">
-        <article class="col">
-          <h6 class="my-4"><a href="{{- document.url | absolute_url -}}" class="chulapa-text-body-color">{{ document.title }}</a></h6>
-        </article>
-    {%- if document.header_img  %}
-      <a href="{{- document.url | absolute_url -}}" class="col-2 ml-2 mr-3 btn chulapa-overlay-img chulapa-gradient" style="background-image: url('{{ document.header_img | absolute_url }}')"></a>
-    {% endif -%}
-      </div>	
+          <div class="card-body">
+          <h6 class="card-title"><a href="{{ document.url | absolute_url }}" class="chulapa-text-body-color">{{ document.title }}</a></h6>
+          {%- if document.subtitle -%}<p class="card-text">{{- document.subtitle -}}</p> {%- endif -%}
+    </div>
+    {% if document.date %}
+    {% assign dateformat = document.date | date: "%B %d, %Y" %}
+    <div class="card-footer">
+      <small class="text-muted"><i class="far fa-calendar" aria-hidden="true"></i> <time datetime="{{- document.date | date_to_xmlschema -}}">{% include_cached snippets/datetranslate.html  date=dateformat %}</time></small>
+    </div>
+    {% endif %}
+  </div>
+      
+      
     {%- if forloop.last -%}
+    </div>
     </div>
   </div>
 </div>
