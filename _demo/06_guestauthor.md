@@ -68,14 +68,23 @@ author:
       icon: "fab fa-linkedin"
 ---
 ```
+{%- for tag in page.tags %}
+    {%- if forloop.first -%}
+      {%- assign alldocs = site.documents | 
+                          where_exp: "item", "item.tag contains tag" -%}
+    {%- else -%}
+      {%- assign docloop = site.documents | 
+                          where_exp: "item", "item.collection contains tag" -%}
+      {%- assign alldocs = alldocs | concat: docloop %}
+    {%- endif -%}
+  {%- endfor -%}
+{% endfor -%}
 
-{%- assign alldocs = site.documents | where_exp: "item", "item.tags contains 'demo'" -%}
 
-{% assign alldocs = alldocs | sort: 'date' | reverse %}
-
-{% assign grouptag =  alldocs | map: 'tags' | join: ','  | split: ','  | group_by: tag | sort: 'size' | reverse %}
-
-{{ page.tags | inspect }}
-
-{{ grouptag | inspect }}
+{% for document in alldocs %}
+  <p> {{ document.title }}
+  {% for tag in document.tag %}
+  <small>{{ tag }}</small>
+  {% endfor %}
+{% endfor %}
 
