@@ -16,12 +16,12 @@
 {% assign thiscol = alldocs | where_exp: "item", "item.collection == page.collection"   %}
 
 
-{% assign groupurl =  relateddocs | concat: thiscol | map: 'url' | join: ','  | split: ',' | group_by: url | sort: 'size' | reverse  %}
+{% assign groupurl =  relateddocs | concat: thiscol | map: 'id' | join: ','  | split: ',' | group_by: id | sort: 'size' | reverse  %}
 
 {%- if groupurl -%}
-  {% for relurl in groupurl limit:3 %}
+  {% for id in groupurl limit:3 %}
     {%- if forloop.first -%}
-    {{ relurl }}
+    {{ id.name }}
     {% assign document = alldocs | where_exp: "item", "item.url contains '11-syntax-highligting'" %}
 <div class="container-lg">
   <div class="row">
