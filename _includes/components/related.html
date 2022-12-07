@@ -1,4 +1,6 @@
-{% assign alldocs = site.documents |  where_exp: "item", "item.url != page.url"  %}
+
+{%- if page.tags -%}
+{%- assign alldocs = site.documents |  where_exp: "item", "item.url != page.url"  -%}
 
 
 {%- for tag in page.tags %}
@@ -13,10 +15,10 @@
   {%- endif -%}
 {%- endfor -%}
 
-{% assign thiscol = alldocs | where_exp: "item", "item.collection == page.collection"   %}
+{%- assign thiscol = alldocs | where_exp: "item", "item.collection == page.collection"   -%}
 
 
-{% assign groupurl =  relateddocs | concat: thiscol | map: 'id' | join: ','  | split: ',' | group_by: id | sort: 'size' | reverse  %}
+{%- assign groupurl =  relateddocs | concat: thiscol | map: 'id' | join: ','  | split: ',' | group_by: id | sort: 'size' | reverse  -%}
 
 {%- if groupurl -%}
   {% for id in groupurl limit:3 %}
@@ -35,12 +37,12 @@
           <h6 class="card-title"><a href="{{ document.url | absolute_url }}" class="chulapa-text-body-color">{{ document.title }}</a></h6>
           {% if document.subtitle %}<p class="card-text">{{- document.subtitle -}}</p> {%- endif -%}
     </div>
-    {% if document.date %}
-    {% assign dateformat = document.date | date: "%B %d, %Y" %}
     <div class="card-footer bg-transparent">
+          {% if document.date %}
+    {% assign dateformat = document.date | date: "%B %d, %Y" %}
       <small><i class="far fa-calendar" aria-hidden="true"></i> <time datetime="{{- document.date | date_to_xmlschema -}}">{% include_cached snippets/datetranslate.html  date=dateformat %}</time></small>
+      {% endif %}
     </div>
-    {% endif %}
   </div>
         {% endfor %}
     {%- if forloop.last -%}
@@ -51,6 +53,6 @@
     {%- endif -%}
   {%- endfor -%}
 {%- endif -%}
-
+{%- endif -%}
 
 
