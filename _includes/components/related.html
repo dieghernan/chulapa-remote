@@ -20,9 +20,8 @@
 
 {%- if groupurl -%}
   {% for relurl in groupurl limit:3 %}
-    <p> {{ relurl.name }}</p>
     {%- if forloop.first -%}
-    {% assign document = alldocs | where_exp: "item", "item.url == relurl.name" %}
+    {% assign document = alldocs | where_exp: "item", "item.url contains relurl.name" %}
 <div class="container-lg">
   <div class="row">
     <div class="col-lg-8 offset-lg-2">
