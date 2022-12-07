@@ -68,3 +68,25 @@ author:
       icon: "fab fa-linkedin"
 ---
 ```
+
+{%- assign alldocs = site.documents -%}
+
+{% assign alldocs = alldocs | sort: 'date' | reverse %}
+
+{%- for tag in page.tags %}
+ {%- if forloop.first -%}
+      {%- assign relateddocs = alldocs | 
+                          where_exp: "item", "item.tag contains tag" -%}
+    {%- else -%}
+      {%- assign docloop = alldocs | 
+                          where_exp: "item", "item.tag contains tag" -%}
+      {%- assign relateddocs = alldocs | concat: docloop %}
+    {%- endif -%}
+{% endfor %}
+
+{% for document in relateddocs %}
+
+<p> {{ document.title}}
+
+{% endfor  %}
+
