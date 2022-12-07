@@ -33,3 +33,11 @@ nav, footer, button, input, label, legend, table, form, aside, header,
 .chulapa-links-hover-only i, .chulapaDateSocial i {
   color: $primary;
 }
+
+.hero-chulapa h1, 
+.hero-chulapa-image h1, 
+.splash-chulapa h1, 
+.splash-chulapa-image h1 {
+  font-family: $headings-font-family;
+  font-weight: 700 !important;
+}
