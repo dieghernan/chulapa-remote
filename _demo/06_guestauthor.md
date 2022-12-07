@@ -82,7 +82,7 @@ author:
   {%- endif -%}
 {%- endfor -%}
 
-{%- assign alldocs = alldocs | uniq %}
+{%- assign alldocs = alldocs | uniq | where_exp: "item", "item.url != page.url" %}
 
 {% for document in alldocs %}
   <p> {{ document.title }}
