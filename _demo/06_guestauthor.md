@@ -69,24 +69,13 @@ author:
 ---
 ```
 
-{%- assign alldocs = site.documents -%}
+{%- assign alldocs = site.documents | where_exp: "item", "item.tags contains 'demo'" -%}
 
 {% assign alldocs = alldocs | sort: 'date' | reverse %}
 
-{%- for tag in page.tags %}
- {%- if forloop.first -%}
-      {%- assign relateddocs = alldocs | 
-                          where_exp: "item", "item.tag contains tag" -%}
-    {%- else -%}
-      {%- assign docloop = alldocs | 
-                          where_exp: "item", "item.tag contains tag" -%}
-      {%- assign relateddocs = alldocs | concat: docloop %}
-    {%- endif -%}
-{% endfor %}
+{% assign grouptag =  alldocs | map: 'tags' | join: ','  | split: ','  | group_by: tag | sort: 'size' | reverse %}
 
-{% for document in relateddocs %}
+{{ page.tags | inspect }}
 
-<p> {{ document.title}}
-
-{% endfor  %}
+{{ grouptag | inspect }}
 
