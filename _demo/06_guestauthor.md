@@ -82,7 +82,7 @@ author:
   {%- endif -%}
 {%- endfor -%}
 
-
+{%- assign alldocs = alldocs | uniq %}
 
 {% for document in alldocs %}
   <p> {{ document.title }}
