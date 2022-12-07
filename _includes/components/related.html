@@ -1,4 +1,4 @@
-{% assign thiscol = site.documents | where_exp: "item", "item.collection == page.collection"  %}
+{% assign thiscol = site.documents | where_exp: "item", "item.collection == page.collection" | where_exp: "item", "item.url != page.url"  %}
 
 {%- for tag in page.tags %}
   {%- if forloop.first -%}
@@ -12,10 +12,9 @@
   {%- endif -%}
 {%- endfor -%}
 
-{%- assign related = alldocs | where_exp: "item", "item.url != page.url"
-| sort: 'date' | reverse %}
+{%- if relateddocs -%}
+{%- assign related = relateddocs | sort: 'date' | reverse %}
 
-{%- if related -%}
 <div class="container-lg">
 <div class="row">
 	<div class="col-lg-8 offset-lg-2">
@@ -30,8 +29,6 @@
 			<a href="{{- document.url | absolute_url -}}" class="col-2 ml-2 btn chulapa-overlay-img chulapa-gradient" style="background-image: url('{{ document.header_img | absolute_url }}')"></a>
 			{%- endif -%}
 		</div>	
-
-
 {%- endfor -%}
 
 </div>
