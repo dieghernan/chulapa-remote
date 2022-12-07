@@ -21,7 +21,8 @@
 {%- if groupurl -%}
   {% for relurl in groupurl limit:3 %}
     {%- if forloop.first -%}
-    {% assign document = alldocs | where_exp: "item", "item.url contains relurl.name" %}
+    {{ relurl }}
+    {% assign document = alldocs | where_exp: "item", "item.url contains '11-syntax-highligting'" %}
 <div class="container-lg">
   <div class="row">
     <div class="col-lg-8 offset-lg-2">
