@@ -18,16 +18,10 @@
 
 {% assign groupurl =  relateddocs | concat: thiscol | map: 'url' | join: ','  | split: ',' | group_by: url | sort: 'size' | reverse  %}
 
-{{ groupurl }}
-
-{% for url in groupurl limit:3 %}
-  <p> {{ url }}
-{%- endfor -%}
-
 {%- if groupurl -%}
   {% for url in groupurl limit:3 %}
     {%- if forloop.first -%}
-    {% assign document = alldocs | where_exp: "item", "item.url == url" %}
+    {% assign document = alldocs | where_exp: "item", "item.url == url.name" %}
 <div class="container-lg">
   <div class="row">
     <div class="col-lg-8 offset-lg-2">

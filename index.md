@@ -3,7 +3,6 @@ title: Landing page
 subtitle: First impression is the last impression
 categories: [demo]
 header_type: hero
-tags: [header-hero, social-links, tags, categories, bottom-navs, date, comments, image, author]
 date: 2020-01-04
 show_date         : true
 show_sociallinks  : true
