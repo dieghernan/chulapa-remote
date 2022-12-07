@@ -19,6 +19,7 @@
 <div class="container-lg">
   <div class="row">
     <div class="col-lg-8 offset-lg-2">
+      <hr/>
       <h5><i class="fa-solid fa-eye"><span class="sr-only">Featured</span></i></h5>
       <div class="card-group">
     {%- endif %}
@@ -29,8 +30,8 @@
     </div>
     {% if document.date %}
     {% assign dateformat = document.date | date: "%B %d, %Y" %}
-    <div class="card-footer">
-      <small class="text-muted"><i class="far fa-calendar" aria-hidden="true"></i> <time datetime="{{- document.date | date_to_xmlschema -}}">{% include_cached snippets/datetranslate.html  date=dateformat %}</time></small>
+    <div class="card-footer bg-transparent">
+      <small><i class="far fa-calendar" aria-hidden="true"></i> <time datetime="{{- document.date | date_to_xmlschema -}}">{% include_cached snippets/datetranslate.html  date=dateformat %}</time></small>
     </div>
     {% endif %}
   </div>
