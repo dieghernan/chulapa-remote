@@ -58,26 +58,3 @@ project_links:
 ---
 ```
 
-
-{% assign alldocs = site.documents |  where_exp: "item", "item.url != page.url"  %}
-
-
-{%- for tag in page.tags %}
-  {%- if forloop.first -%}
-    {%- assign relateddocs = alldocs | 
-                    where_exp: "item", "item.tags contains tag" -%}
-                    
-  {%- else -%}
-    {%- assign docloop = alldocs | 
-                    where_exp: "item", "item.tags contains tag" -%}
-    {%- assign relateddocs = relateddocs | concat: docloop  %}
-  {%- endif -%}
-{%- endfor -%}
-
-{% assign thiscol = alldocs | where_exp: "item", "item.collection == page.collection"   %}
-
-
-{% assign groupurl =  relateddocs | concat: thiscol | map: 'url' | join: ','  | split: ',' | group_by: url | sort: 'size' | reverse  %}
-
-
-{{ groupurl }}

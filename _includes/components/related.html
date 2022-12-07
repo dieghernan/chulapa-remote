@@ -1,21 +1,27 @@
-{% assign thiscol = site.documents | where_exp: "item", "item.collection == page.collection" | where_exp: "item", "item.url != page.url"  %}
+{% assign alldocs = site.documents |  where_exp: "item", "item.url != page.url"  %}
+
 
 {%- for tag in page.tags %}
   {%- if forloop.first -%}
-    {%- assign relateddocs = thiscol | 
+    {%- assign relateddocs = alldocs | 
                     where_exp: "item", "item.tags contains tag" -%}
                     
   {%- else -%}
-    {%- assign docloop = thiscol | 
+    {%- assign docloop = alldocs | 
                     where_exp: "item", "item.tags contains tag" -%}
-    {%- assign relateddocs = relateddocs | concat: docloop | uniq %}
+    {%- assign relateddocs = relateddocs | concat: docloop  %}
   {%- endif -%}
 {%- endfor -%}
 
-{%- if relateddocs -%}
-  {%- assign related = relateddocs | sort: 'date' | reverse %}
-  {% for document in related limit:3 %}
+{% assign thiscol = alldocs | where_exp: "item", "item.collection == page.collection"   %}
+
+
+{% assign groupurl =  relateddocs | concat: thiscol | map: 'url' | join: ','  | split: ',' | group_by: url | sort: 'size' | reverse  %}
+
+{%- if groupurl -%}
+  {% for url in groupurl limit:3 %}
     {%- if forloop.first -%}
+    {% assign document = alldocs | where_exp: "item", "item.url == url" %}
 <div class="container-lg">
   <div class="row">
     <div class="col-lg-8 offset-lg-2">
