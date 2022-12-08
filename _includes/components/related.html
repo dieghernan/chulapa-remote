@@ -20,6 +20,9 @@
 
 {%- assign groupurl =  relateddocs | concat: thiscol | map: 'id' | join: ','  | split: ',' | group_by: id | sort: 'size' | reverse  -%}
 
+
+{% assign groupurl = groupurl | where_exp: "item", "item.size > 7"  -%}
+
 {%- if groupurl -%}
   {% for id in groupurl limit:3 %}
     {% assign areldoc = site.documents | where_exp: "item", "item.id == id.name" %}
