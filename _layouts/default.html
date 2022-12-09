@@ -15,7 +15,7 @@ layout: minimal
 			<article id="maincontent" class="col-lg-8 mt-3">
 			
 			
-			{% include components/toc.html sanitize=false html=content h_min=2 h_max=6 skip_no_ids=true id="toc" item_class="nav-item" anchor_class="nav-link" %}
+			{% include components/toc.html sanitize=false html=content h_min=2 h_max=6 skip_no_ids=true id="sidetoc" class="nav.flex-column" item_class="nav-item" anchor_class="nav-link" %}
 			
 			 {% if page.show_toc %} 
 			               {% assign h_min = page.h_min | default: 2 %}
