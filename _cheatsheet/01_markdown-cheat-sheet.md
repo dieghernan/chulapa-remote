@@ -6,8 +6,6 @@ categories: [tutorial]
 tags: [starter,syntax,markdown]
 ---
 
-{% include components/toc.html sanitize=false html=content h_min=2 h_max=6 skip_no_ids=true id="toc" item_class="nav-item" anchor_class="nav-link" %}
-
 ## What’s Markdown?
 
 Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents. Created by [John Gruber](https://daringfireball.net/projects/markdown/) in 2004, Markdown is now one of the world’s most popular markup languages.
