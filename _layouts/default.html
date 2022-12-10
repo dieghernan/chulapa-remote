@@ -19,9 +19,19 @@ layout: minimal
 .chulapa-btn-sidebar {
   top: 80vh;
   left: 0;
-  opacity: 0.4;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.4s linear;
   z-index: 1099;
 }
+
+.chulapa-btn-sidebar.has-toc {
+  visibility: visible;
+  opacity: 0.4;
+
+}
+
+
 .bs-canvas-overlay {
    opacity: 0;
    z-index: -1;
@@ -83,6 +93,7 @@ function cleanup() {
 
  if (sB) {
    document.getElementById("demo").classList.remove('d-none');
+   document.getElementById("demo").classList.add('has-toc');
  } else {
    document.getElementById("sideBar").remove();
  }
