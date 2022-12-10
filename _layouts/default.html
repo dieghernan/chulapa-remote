@@ -71,9 +71,9 @@ layout: minimal
         navbar-text close" aria-label="Close" onclick="closeSideBar()"><i class="fa-solid fa-times"></i>
         	<span class="sr-only">Close Sidebar</span></button>
     </p>
-    <nav class="navbar-nav px-4 my-auto">
+    <nav class="navbar-nav px-2 my-auto">
 			
-			{% include components/toc.html sanitize=false html=content h_min=h_min h_max=h_max skip_no_ids=true id="sidetoc" class="nav.flex-column" item_class="nav-item.nav" anchor_class="nav-link" %}
+			{% include components/toc.html sanitize=false html=content h_min=h_min h_max=h_max skip_no_ids=true id="sidetoc" class="nav.flex-column" item_class="nav-item.nav.d-block" anchor_class="nav-link" %}
 			    </nav>    
 </div>
 <script>
