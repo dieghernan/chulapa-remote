@@ -77,6 +77,19 @@ layout: minimal
 			    </nav>    
 </div>
 <script>
+
+function cleanup() {
+  var sB = document.getElementById("sidetoc");
+
+ if (sB) {
+   console.log('Detected');
+ } else {
+   document.getElementById("demo").remove();
+   document.getElementById("sideBar").remove();
+ }
+
+}
+
 function openSideBar() {
 console.log(window.innerWidth);
 var iDiv = document.createElement('div');
