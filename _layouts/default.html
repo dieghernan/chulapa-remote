@@ -17,7 +17,7 @@ layout: minimal
 <style>
 
 .chulapa-btn-sidebar {
-  top: 60vh;
+  top: 80vh;
   left: 0;
   opacity: 0.4;
   z-index: 1099;
@@ -61,7 +61,7 @@ layout: minimal
                            {% assign h_max = page.h_max | default: 4 %}
                            
                            
-     	<button class="close position-fixed chulapa-btn-sidebar disabled px-2" id='demo' onclick="openSideBar()" aria-label="Open Sidebar"><i class="fa-solid fa-bars-staggered"></i>
+     	<button class="close position-fixed chulapa-btn-sidebar disabled px-2 d-none" id='demo' onclick="openSideBar()" aria-label="Open Sidebar" aria-expanded="false" aria-controls="sideBar"><i class="fa-solid fa-bars-staggered"></i>
         	<span class="sr-only">Open Sidebar</span>
         </button>
 
@@ -82,9 +82,8 @@ function cleanup() {
   var sB = document.getElementById("sidetoc");
 
  if (sB) {
-   console.log('Detected');
+   document.getElementById("demo").classList.remove('d-none');
  } else {
-   document.getElementById("demo").remove();
    document.getElementById("sideBar").remove();
  }
 
@@ -102,11 +101,13 @@ iDiv.onclick = closeSideBar();
 
 document.getElementById("demo").classList.add('d-none');
 
+document.getElementById("demo").setAttribute("aria-expanded", 'true');
+
 document.getElementById("body").classList.add('bs-canvas-anim');
 document.getElementById("body").style.overflowX ='hidden';
 if (window.innerWidth >= 576) {
 document.getElementById("body").style.marginLeft='330px';
-//document.getElementById("body").style.marginRight='-330px';
+document.getElementById("body").style.marginRight='-330px';
 } else {
 document.getElementById("body").prepend(iDiv);
 }
@@ -126,6 +127,7 @@ var sB = document.getElementById("sideBarOverlay");
 document.getElementById("body").removeAttribute('style');
 
 document.getElementById("demo").classList.remove('d-none');
+document.getElementById("demo").setAttribute("aria-expanded", 'false');
 
 return false
 }
