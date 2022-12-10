@@ -14,9 +14,109 @@ layout: minimal
 			</aside>
 			<article id="maincontent" class="col-lg-8 mt-3">
 			
+<style>
+
+.chulapa-btn-sidebar {
+  top: 60vh;
+  left: 0;
+  opacity: 0.4;
+  z-index: 1099;
+}
+.bs-canvas-overlay {
+   opacity: 0;
+   z-index: -1;
+}
+
+.bs-canvas-overlay.show {
+   opacity: 0.15;
+   z-index: 1100;
+}
+
+
+.bs-canvas {
+   top: 0;
+   width: 330px;
+   margin-left: -330px;
+   z-index: 1110;
+   overflow-x: hidden;
+   overflow-y: auto;
+}
+
+.bs-canvas-left {
+   left: 0;
+}
+
+.bs-canvas-anim {
+   transition: all .4s ease-out;
+   -webkit-transition: all .4s ease-out;
+   -moz-transition: all .4s ease-out;
+   -ms-transition: all .4s ease-out;
+}
+
+</style>
+
+
+
+	{% assign h_min = page.h_min | default: 2 %}
+                           {% assign h_max = page.h_max | default: 4 %}
+                           
+                           
+     	<button class="close position-fixed chulapa-btn-sidebar disabled px-2" id='demo' onclick="openSideBar()" aria-label="Open Sidebar"><i class="fa-solid fa-bars-staggered"></i>
+        	<span class="sr-only">Open Sidebar</span>
+        </button>
+
+			<div class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed navbar-chulapa h-100" id='sideBar'>
+	<p class="p-3">
+        <button type="button" class=" 
+        navbar-text close" aria-label="Close" onclick="closeSideBar()"><i class="fa-solid fa-times"></i>
+        	<span class="sr-only">Close Sidebar</span></button>
+    </p>
+    <nav class="navbar-nav px-4 my-auto">
 			
-			{% include components/toc.html sanitize=false html=content h_min=2 h_max=6 skip_no_ids=true id="sidetoc" class="nav.flex-column" item_class="nav-item.nav" anchor_class="nav-link" %}
-			
+			{% include components/toc.html sanitize=false html=content h_min=h_min h_max=h_max skip_no_ids=true id="sidetoc" class="nav.flex-column" item_class="nav-item.nav" anchor_class="nav-link" %}
+			    </nav>    
+</div>
+<script>
+function openSideBar() {
+console.log(window.innerWidth);
+var iDiv = document.createElement('div');
+iDiv.classList.add('bs-canvas-overlay', 'bs-canvas-anim', 'bg-dark', 'position-fixed', 'w-100', 'h-100', 'show');
+iDiv.setAttribute('id', 'sideBarOverlay');
+iDiv.onclick = closeSideBar();
+
+document.getElementById("demo").classList.add('d-none');
+
+document.getElementById("body").classList.add('bs-canvas-anim');
+document.getElementById("body").style.overflowX ='hidden';
+if (window.innerWidth >= 576) {
+document.getElementById("body").style.marginLeft='330px';
+//document.getElementById("body").style.marginRight='-330px';
+} else {
+document.getElementById("body").prepend(iDiv);
+}
+document.getElementById("sideBar").style.marginLeft='0';
+return false
+}
+
+function closeSideBar() {
+
+document.getElementById("sideBar").removeAttribute('style');
+var sB = document.getElementById("sideBarOverlay");
+
+ if (sB) {
+   sB.remove();
+ }
+ 
+document.getElementById("body").removeAttribute('style');
+
+document.getElementById("demo").classList.remove('d-none');
+
+return false
+}
+
+</script>
+
+
 			 {% if page.show_toc %} 
 			               {% assign h_min = page.h_min | default: 2 %}
                            {% assign h_max = page.h_max | default: 4 %}
