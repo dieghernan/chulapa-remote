@@ -5,7 +5,7 @@
     <!--  MIT License-->
     <!-- Docs: https://dieghernan.github.io/chulapa -->
     <!-- Repo: https://github.com/dieghernan/chulapa -->
-    <!-- Page build 2022-12-10 21:25:42 +0000 -->
+    <!-- Page build 2022-12-10 21:33:38 +0000 -->
     <!--Google Structured Data-->
     <script type="application/ld+json">
         {
@@ -17,8 +17,8 @@
       },
       "headline": "Demos",
       "image": "https://dieghernan.github.io/chulapa-remote/assets/img/site/banner-demos.png",
-      "datePublished": "2022-12-10T21:25:42+00:00",
-      "dateModified": "2022-12-10T21:25:42+00:00",
+      "datePublished": "2022-12-10T21:33:38+00:00",
+      "dateModified": "2022-12-10T21:33:38+00:00",
       "author": {
         "@type": "Person",
         "name": "dieghernan"
@@ -166,7 +166,7 @@
 			<article id="maincontent" class="col-lg-8 mt-3">
 <style>
 .chulapa-btn-sidebar {
-  top: 60vh;
+  top: 80vh;
   left: 0;
   opacity: 0.4;
   z-index: 1099;
@@ -197,7 +197,7 @@
    -ms-transition: all .4s ease-out;
 }
 </style>
-     	<button class="close position-fixed chulapa-btn-sidebar disabled px-2" id='demo' onclick="openSideBar()" aria-label="Open Sidebar"><i class="fa-solid fa-bars-staggered"></i>
+     	<button class="close position-fixed chulapa-btn-sidebar disabled px-2 d-none" id='demo' onclick="openSideBar()" aria-label="Open Sidebar" aria-expanded="false" aria-controls="sideBar"><i class="fa-solid fa-bars-staggered"></i>
         	<span class="sr-only">Open Sidebar</span>
         </button>
 			<div class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed navbar-chulapa h-100" id='sideBar'>
@@ -213,9 +213,8 @@
 function cleanup() {
   var sB = document.getElementById("sidetoc");
  if (sB) {
-   console.log('Detected');
+   document.getElementById("demo").classList.remove('d-none');
  } else {
-   document.getElementById("demo").remove();
    document.getElementById("sideBar").remove();
  }
 }
@@ -227,11 +226,12 @@ iDiv.classList.add('bs-canvas-overlay', 'bs-canvas-anim', 'bg-dark', 'position-f
 iDiv.setAttribute('id', 'sideBarOverlay');
 iDiv.onclick = closeSideBar();
 document.getElementById("demo").classList.add('d-none');
+document.getElementById("demo").setAttribute("aria-expanded", 'true');
 document.getElementById("body").classList.add('bs-canvas-anim');
 document.getElementById("body").style.overflowX ='hidden';
 if (window.innerWidth >= 576) {
 document.getElementById("body").style.marginLeft='330px';
-//document.getElementById("body").style.marginRight='-330px';
+document.getElementById("body").style.marginRight='-330px';
 } else {
 document.getElementById("body").prepend(iDiv);
 }
@@ -246,6 +246,7 @@ var sB = document.getElementById("sideBarOverlay");
  }
 document.getElementById("body").removeAttribute('style');
 document.getElementById("demo").classList.remove('d-none');
+document.getElementById("demo").setAttribute("aria-expanded", 'false');
 return false
 }
 </script>
@@ -274,7 +275,7 @@ return false
 			</article>
 			<div class="border-top-0 card-footer border-primary chulapa-bg-transparent">
 				<p class="small text-right font-italic mb-1">
-<time datetime="2022-12-10T21:25:42+00:00">10/12/2022</time></p><a href="https://dieghernan.github.io/chulapa-remote/tags#layout-default" class="badge chulapa-pill-bg-primary mx-1">layout-default</a><a href="https://dieghernan.github.io/chulapa-remote/tags#syntax-highlight" class="badge chulapa-pill-bg-primary mx-1">syntax-highlight</a></div>
+<time datetime="2022-12-10T21:33:38+00:00">10/12/2022</time></p><a href="https://dieghernan.github.io/chulapa-remote/tags#layout-default" class="badge chulapa-pill-bg-primary mx-1">layout-default</a><a href="https://dieghernan.github.io/chulapa-remote/tags#syntax-highlight" class="badge chulapa-pill-bg-primary mx-1">syntax-highlight</a></div>
 		</div>
 	</div>
 </div>
@@ -293,7 +294,7 @@ return false
 			</article>
 			<div class="border-top-0 card-footer border-primary chulapa-bg-transparent">
 				<p class="small text-right font-italic mb-1">
-<time datetime="2022-12-10T21:25:42+00:00">10/12/2022</time></p><a href="https://dieghernan.github.io/chulapa-remote/tags#layout-default" class="badge chulapa-pill-bg-primary mx-1">layout-default</a><a href="https://dieghernan.github.io/chulapa-remote/tags#video" class="badge chulapa-pill-bg-primary mx-1">video</a><a href="https://dieghernan.github.io/chulapa-remote/tags#lazy" class="badge chulapa-pill-bg-primary mx-1">lazy</a></div>
+<time datetime="2022-12-10T21:33:38+00:00">10/12/2022</time></p><a href="https://dieghernan.github.io/chulapa-remote/tags#layout-default" class="badge chulapa-pill-bg-primary mx-1">layout-default</a><a href="https://dieghernan.github.io/chulapa-remote/tags#video" class="badge chulapa-pill-bg-primary mx-1">video</a><a href="https://dieghernan.github.io/chulapa-remote/tags#lazy" class="badge chulapa-pill-bg-primary mx-1">lazy</a></div>
 		</div>
 	</div>
 </div>
@@ -312,7 +313,7 @@ return false
 			</article>
 			<div class="border-top-0 card-footer border-primary chulapa-bg-transparent">
 				<p class="small text-right font-italic mb-1">
-<time datetime="2022-12-10T21:25:42+00:00">10/12/2022</time></p><a href="https://dieghernan.github.io/chulapa-remote/tags#layout-default" class="badge chulapa-pill-bg-primary mx-1">layout-default</a><a href="https://dieghernan.github.io/chulapa-remote/tags#video" class="badge chulapa-pill-bg-primary mx-1">video</a></div>
+<time datetime="2022-12-10T21:33:38+00:00">10/12/2022</time></p><a href="https://dieghernan.github.io/chulapa-remote/tags#layout-default" class="badge chulapa-pill-bg-primary mx-1">layout-default</a><a href="https://dieghernan.github.io/chulapa-remote/tags#video" class="badge chulapa-pill-bg-primary mx-1">video</a></div>
 		</div>
 	</div>
 </div>
@@ -331,7 +332,7 @@ style="background-image: url('https://dieghernan.github.io/chulapa/assets/img/si
 			</article>
 			<div class="border-top-0 card-footer border-primary chulapa-bg-transparent">
 				<p class="small text-right font-italic mb-1">
-<time datetime="2022-12-10T21:25:42+00:00">10/12/2022</time></p><a href="https://dieghernan.github.io/chulapa-remote/categories#demo" class="badge chulapa-pill-bg-secondary mx-1">demo</a><a href="https://dieghernan.github.io/chulapa-remote/categories#layout" class="badge chulapa-pill-bg-secondary mx-1">layout</a><a href="https://dieghernan.github.io/chulapa-remote/tags#layout-default" class="badge chulapa-pill-bg-primary mx-1">layout-default</a><a href="https://dieghernan.github.io/chulapa-remote/tags#header-image" class="badge chulapa-pill-bg-primary mx-1">header-image</a><a href="https://dieghernan.github.io/chulapa-remote/tags#image" class="badge chulapa-pill-bg-primary mx-1">image</a></div>
+<time datetime="2022-12-10T21:33:38+00:00">10/12/2022</time></p><a href="https://dieghernan.github.io/chulapa-remote/categories#demo" class="badge chulapa-pill-bg-secondary mx-1">demo</a><a href="https://dieghernan.github.io/chulapa-remote/categories#layout" class="badge chulapa-pill-bg-secondary mx-1">layout</a><a href="https://dieghernan.github.io/chulapa-remote/tags#layout-default" class="badge chulapa-pill-bg-primary mx-1">layout-default</a><a href="https://dieghernan.github.io/chulapa-remote/tags#header-image" class="badge chulapa-pill-bg-primary mx-1">header-image</a><a href="https://dieghernan.github.io/chulapa-remote/tags#image" class="badge chulapa-pill-bg-primary mx-1">image</a></div>
 		</div>
 	</div>
 </div>
@@ -349,7 +350,7 @@ style="background-image: url('https://dieghernan.github.io/chulapa/assets/img/ga
 			</article>
 			<div class="border-top-0 card-footer border-primary chulapa-bg-transparent">
 				<p class="small text-right font-italic mb-1">
-<time datetime="2022-12-10T21:25:42+00:00">10/12/2022</time></p><a href="https://dieghernan.github.io/chulapa-remote/categories#demo" class="badge chulapa-pill-bg-secondary mx-1">demo</a><a href="https://dieghernan.github.io/chulapa-remote/categories#layout" class="badge chulapa-pill-bg-secondary mx-1">layout</a><a href="https://dieghernan.github.io/chulapa-remote/tags#layout-minimal" class="badge chulapa-pill-bg-primary mx-1">layout-minimal</a><a href="https://dieghernan.github.io/chulapa-remote/tags#header-splash" class="badge chulapa-pill-bg-primary mx-1">header-splash</a><a href="https://dieghernan.github.io/chulapa-remote/tags#image" class="badge chulapa-pill-bg-primary mx-1">image</a><a href="https://dieghernan.github.io/chulapa-remote/tags#project-links" class="badge chulapa-pill-bg-primary mx-1">project-links</a><a href="https://dieghernan.github.io/chulapa-remote/tags#bootstrap" class="badge chulapa-pill-bg-primary mx-1">bootstrap</a></div>
+<time datetime="2022-12-10T21:33:38+00:00">10/12/2022</time></p><a href="https://dieghernan.github.io/chulapa-remote/categories#demo" class="badge chulapa-pill-bg-secondary mx-1">demo</a><a href="https://dieghernan.github.io/chulapa-remote/categories#layout" class="badge chulapa-pill-bg-secondary mx-1">layout</a><a href="https://dieghernan.github.io/chulapa-remote/tags#layout-minimal" class="badge chulapa-pill-bg-primary mx-1">layout-minimal</a><a href="https://dieghernan.github.io/chulapa-remote/tags#header-splash" class="badge chulapa-pill-bg-primary mx-1">header-splash</a><a href="https://dieghernan.github.io/chulapa-remote/tags#image" class="badge chulapa-pill-bg-primary mx-1">image</a><a href="https://dieghernan.github.io/chulapa-remote/tags#project-links" class="badge chulapa-pill-bg-primary mx-1">project-links</a><a href="https://dieghernan.github.io/chulapa-remote/tags#bootstrap" class="badge chulapa-pill-bg-primary mx-1">bootstrap</a></div>
 		</div>
 	</div>
 </div>
