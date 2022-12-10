@@ -5,7 +5,7 @@
     <!--  MIT License-->
     <!-- Docs: https://dieghernan.github.io/chulapa -->
     <!-- Repo: https://github.com/dieghernan/chulapa -->
-    <!-- Page build 2022-12-09 18:02:42 +0000 -->
+    <!-- Page build 2022-12-10 20:32:57 +0000 -->
     <!--Google Structured Data-->
     <script type="application/ld+json">
         {
@@ -17,8 +17,8 @@
       },
       "headline": "kramdown cheatsheet",
       "image": "https://github.com/dieghernan.png",
-      "datePublished": "2022-12-09T18:02:42+00:00",
-      "dateModified": "2022-12-09T18:02:42+00:00",
+      "datePublished": "2022-12-10T20:32:57+00:00",
+      "dateModified": "2022-12-10T20:32:57+00:00",
       "author": {
         "@type": "Person",
         "name": "dieghernan"
@@ -128,7 +128,7 @@
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
 <!-- end custom head snippets -->
 </head>
-<body class="d-flex flex-column">
+<body class="d-flex flex-column" id="body">
 	<nav class="navbar navbar-expand-md sticky-top navbar-chulapa" aria-labelledby="primary-navigation">
 	<div class="container-fluid mx-md-2">
 			<a class="navbar-brand font-weight-bold" href="https://dieghernan.github.io/chulapa-remote/">Home</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
@@ -183,7 +183,82 @@
 		<div class="row pt-2">
 			<aside class="col-lg-2 mt-lg-3 small"></aside>
 			<article id="maincontent" class="col-lg-8 mt-3">
-			<ul class="nav flex-column" id="sidetoc"><li class="nav-item nav"><a href="#whats-kramdown" class="nav-link">What’s kramdown?</a></li><li class="nav-item nav"><a href="#second-level-header" class="nav-link">Second level header</a></li><li class="nav-item nav"><a href="#h2-header" class="nav-link">H2 header</a><ul><li class="nav-item nav"><a href="#h3-header" class="nav-link">H3 header</a><ul><li class="nav-item nav"><a href="#h4-header" class="nav-link">H4 header</a><ul><li class="nav-item nav"><a href="#h5-header" class="nav-link">H5 header</a><ul><li class="nav-item nav"><a href="#h6-header" class="nav-link">H6 header</a></li></ul></li></ul></li></ul></li></ul></li><li class="nav-item nav"><a href="#h2-header2" class="nav-link">H2 header2</a></li><li class="nav-item nav"><a href="#headers-work-too" class="nav-link">Headers work too</a></li></ul>
+<style>
+.chulapa-btn-sidebar {
+  top: 60vh;
+  left: 0;
+  opacity: 0.4;
+  z-index: 1099;
+}
+.bs-canvas-overlay {
+   opacity: 0;
+   z-index: -1;
+}
+.bs-canvas-overlay.show {
+   opacity: 0.15;
+   z-index: 1100;
+}
+.bs-canvas {
+   top: 0;
+   width: 330px;
+   margin-left: -330px;
+   z-index: 1110;
+   overflow-x: hidden;
+   overflow-y: auto;
+}
+.bs-canvas-left {
+   left: 0;
+}
+.bs-canvas-anim {
+   transition: all .4s ease-out;
+   -webkit-transition: all .4s ease-out;
+   -moz-transition: all .4s ease-out;
+   -ms-transition: all .4s ease-out;
+}
+</style>
+     	<button class="close position-fixed chulapa-btn-sidebar disabled px-2" id='demo' onclick="openSideBar()" aria-label="Open Sidebar"><i class="fa-solid fa-bars-staggered"></i>
+        	<span class="sr-only">Open Sidebar</span>
+        </button>
+			<div class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed navbar-chulapa h-100" id='sideBar'>
+	<p class="p-3">
+        <button type="button" class=" 
+        navbar-text close" aria-label="Close" onclick="closeSideBar()"><i class="fa-solid fa-times"></i>
+        	<span class="sr-only">Close Sidebar</span></button>
+   </p>
+   <nav class="navbar-nav px-4 my-auto">
+			<ul class="nav flex-column" id="sidetoc"><li class="nav-item nav"><a href="#whats-kramdown" class="nav-link">What’s kramdown?</a></li><li class="nav-item nav"><a href="#second-level-header" class="nav-link">Second level header</a></li><li class="nav-item nav"><a href="#h2-header" class="nav-link">H2 header</a><ul><li class="nav-item nav"><a href="#h3-header" class="nav-link">H3 header</a><ul><li class="nav-item nav"><a href="#h4-header" class="nav-link">H4 header</a></li></ul></li></ul></li><li class="nav-item nav"><a href="#h2-header2" class="nav-link">H2 header2</a></li><li class="nav-item nav"><a href="#headers-work-too" class="nav-link">Headers work too</a></li></ul>
+			   </nav>   
+</div>
+<script>
+function openSideBar() {
+console.log(window.innerWidth);
+var iDiv = document.createElement('div');
+iDiv.classList.add('bs-canvas-overlay', 'bs-canvas-anim', 'bg-dark', 'position-fixed', 'w-100', 'h-100', 'show');
+iDiv.setAttribute('id', 'sideBarOverlay');
+iDiv.onclick = closeSideBar();
+document.getElementById("demo").classList.add('d-none');
+document.getElementById("body").classList.add('bs-canvas-anim');
+document.getElementById("body").style.overflowX ='hidden';
+if (window.innerWidth >= 576) {
+document.getElementById("body").style.marginLeft='330px';
+//document.getElementById("body").style.marginRight='-330px';
+} else {
+document.getElementById("body").prepend(iDiv);
+}
+document.getElementById("sideBar").style.marginLeft='0';
+return false
+}
+function closeSideBar() {
+document.getElementById("sideBar").removeAttribute('style');
+var sB = document.getElementById("sideBarOverlay");
+ if (sB) {
+   sB.remove();
+ }
+document.getElementById("body").removeAttribute('style');
+document.getElementById("demo").classList.remove('d-none');
+return false
+}
+</script>
             <nav aria-labelledby="table-of-contents">
 			<ul class="chulapa-toc-wrapper list-group mb-5 mx-3 mx-lg-5" id="toc"><li class="list-group-item font-weight-bold py-1 pr-0 mr-0 chulapa-toc-reset"><a href="#whats-kramdown">What’s kramdown?</a></li><li class="list-group-item font-weight-bold py-1 pr-0 mr-0 chulapa-toc-reset"><a href="#second-level-header">Second level header</a></li><li class="list-group-item font-weight-bold py-1 pr-0 mr-0 chulapa-toc-reset"><a href="#h2-header">H2 header</a><ul><li class="list-group-item font-weight-bold py-1 pr-0 mr-0 chulapa-toc-reset"><a href="#h3-header">H3 header</a><ul><li class="list-group-item font-weight-bold py-1 pr-0 mr-0 chulapa-toc-reset"><a href="#h4-header">H4 header</a></li></ul></li></ul></li><li class="list-group-item font-weight-bold py-1 pr-0 mr-0 chulapa-toc-reset"><a href="#h2-header2">H2 header2</a></li><li class="list-group-item font-weight-bold py-1 pr-0 mr-0 chulapa-toc-reset"><a href="#headers-work-too">Headers work too</a></li></ul>
 			</nav>
@@ -416,14 +491,14 @@ which is continued here.</p>
  <div class="row">
    <div class="col-lg-8 offset-lg-2">
      <hr>
-     <h5><i class="fa-solid fa-shuffle fa-xl"></i><span class="sr-only">Related</span></h5>
+     <p><i class="fa-solid fa-shuffle fa-xl"></i><span class="sr-only">Related</span></p>
      <nav class="card-group" aria-labelledby="related-articles">
         <article class="card  border chulapa-related">
          <div class="card-body">
-         <h6 class="card-title"><a href="https://dieghernan.github.io/chulapa-remote/cheatsheets/01-markdown-cheat-sheet" class="chulapa-text-body-color">Markdown cheatsheet</a></h6>
-         <p class="card-text">The basic syntax of your page</p></div>
+         <p class="card-title chulapa-headingfont"><a href="https://dieghernan.github.io/chulapa-remote/cheatsheets/01-markdown-cheat-sheet" class="chulapa-text-body-color">Markdown cheatsheet</a></p>
+         <p class="card-text"><small>The basic syntax of your page</small></p></div>
    <div class="card-footer bg-transparent">
-      <small><i class="far fa-calendar" aria-hidden="true"></i> <time datetime="2022-12-09T18:02:42+00:00">december 09, 2022</time></small>
+      <small><i class="far fa-calendar" aria-hidden="true"></i> <time datetime="2022-12-10T20:32:57+00:00">december 10, 2022</time></small>
    </div>
  </article></nav>
    </div>

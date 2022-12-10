@@ -5,7 +5,7 @@
     <!--  MIT License-->
     <!-- Docs: https://dieghernan.github.io/chulapa -->
     <!-- Repo: https://github.com/dieghernan/chulapa -->
-    <!-- Page build 2022-12-09 18:02:42 +0000 -->
+    <!-- Page build 2022-12-10 20:32:57 +0000 -->
     <!--Google Structured Data-->
     <script type="application/ld+json">
         {
@@ -126,7 +126,7 @@
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
 <!-- end custom head snippets -->
 </head>
-<body class="d-flex flex-column">
+<body class="d-flex flex-column" id="body">
 	<nav class="navbar navbar-expand-md sticky-top navbar-chulapa" aria-labelledby="primary-navigation">
 	<div class="container-fluid mx-md-2">
 			<a class="navbar-brand font-weight-bold" href="https://dieghernan.github.io/chulapa-remote/">Home</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
@@ -196,7 +196,82 @@
 				</div>
 </aside>
 			<article id="maincontent" class="col-lg-8 mt-3">
+<style>
+.chulapa-btn-sidebar {
+  top: 60vh;
+  left: 0;
+  opacity: 0.4;
+  z-index: 1099;
+}
+.bs-canvas-overlay {
+   opacity: 0;
+   z-index: -1;
+}
+.bs-canvas-overlay.show {
+   opacity: 0.15;
+   z-index: 1100;
+}
+.bs-canvas {
+   top: 0;
+   width: 330px;
+   margin-left: -330px;
+   z-index: 1110;
+   overflow-x: hidden;
+   overflow-y: auto;
+}
+.bs-canvas-left {
+   left: 0;
+}
+.bs-canvas-anim {
+   transition: all .4s ease-out;
+   -webkit-transition: all .4s ease-out;
+   -moz-transition: all .4s ease-out;
+   -ms-transition: all .4s ease-out;
+}
+</style>
+     	<button class="close position-fixed chulapa-btn-sidebar disabled px-2" id='demo' onclick="openSideBar()" aria-label="Open Sidebar"><i class="fa-solid fa-bars-staggered"></i>
+        	<span class="sr-only">Open Sidebar</span>
+        </button>
+			<div class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed navbar-chulapa h-100" id='sideBar'>
+	<p class="p-3">
+        <button type="button" class=" 
+        navbar-text close" aria-label="Close" onclick="closeSideBar()"><i class="fa-solid fa-times"></i>
+        	<span class="sr-only">Close Sidebar</span></button>
+   </p>
+   <nav class="navbar-nav px-4 my-auto">
 			<ul class="nav flex-column" id="sidetoc"><li class="nav-item nav"><a href="#navbars" class="nav-link">Navbars</a></li><li class="nav-item nav"><a href="#buttons" class="nav-link">Buttons</a></li><li class="nav-item nav"><a href="#typography" class="nav-link">Typography</a><ul><li class="nav-item nav"><a href="#type-blockquotes" class="nav-link">Blockquotes</a></li></ul></li><li class="nav-item nav"><a href="#tables" class="nav-link">Tables</a></li><li class="nav-item nav"><a href="#forms" class="nav-link">Forms</a></li><li class="nav-item nav"><a href="#navs" class="nav-link">Navs</a><ul><li class="nav-item nav"><a href="#nav-tabs" class="nav-link">Tabs</a></li><li class="nav-item nav"><a href="#nav-pills" class="nav-link">Pills</a></li><li class="nav-item nav"><a href="#nav-breadcrumbs" class="nav-link">Breadcrumbs</a></li><li class="nav-item nav"><a href="#pagination" class="nav-link">Pagination</a></li></ul></li><li class="nav-item nav"><a href="#indicators" class="nav-link">Indicators</a></li><li class="nav-item nav"><a href="#progress" class="nav-link">Progress</a><ul><li class="nav-item nav"><a href="#progress-basic" class="nav-link">Basic</a></li><li class="nav-item nav"><a href="#progress-alternatives" class="nav-link">Contextual alternatives</a></li><li class="nav-item nav"><a href="#progress-multiple" class="nav-link">Multiple bars</a></li><li class="nav-item nav"><a href="#progress-striped" class="nav-link">Striped</a><ul><li class="nav-item nav"><a href="#progress-animated" class="nav-link">Animated</a></li></ul></li></ul></li><li class="nav-item nav"><a href="#containers" class="nav-link">Containers</a></li><li class="nav-item nav"><a href="#dialogs" class="nav-link">Dialogs</a></li><li class="nav-item nav"><a href="#chulapa-comp" class="nav-link"><span class="chulapa">Chulapa</span> components</a></li></ul>
+			   </nav>   
+</div>
+<script>
+function openSideBar() {
+console.log(window.innerWidth);
+var iDiv = document.createElement('div');
+iDiv.classList.add('bs-canvas-overlay', 'bs-canvas-anim', 'bg-dark', 'position-fixed', 'w-100', 'h-100', 'show');
+iDiv.setAttribute('id', 'sideBarOverlay');
+iDiv.onclick = closeSideBar();
+document.getElementById("demo").classList.add('d-none');
+document.getElementById("body").classList.add('bs-canvas-anim');
+document.getElementById("body").style.overflowX ='hidden';
+if (window.innerWidth >= 576) {
+document.getElementById("body").style.marginLeft='330px';
+//document.getElementById("body").style.marginRight='-330px';
+} else {
+document.getElementById("body").prepend(iDiv);
+}
+document.getElementById("sideBar").style.marginLeft='0';
+return false
+}
+function closeSideBar() {
+document.getElementById("sideBar").removeAttribute('style');
+var sB = document.getElementById("sideBarOverlay");
+ if (sB) {
+   sB.remove();
+ }
+document.getElementById("body").removeAttribute('style');
+document.getElementById("demo").classList.remove('d-none');
+return false
+}
+</script>
             <nav aria-labelledby="table-of-contents">
 			<ul class="chulapa-toc-wrapper list-group mb-5 mx-3 mx-lg-5" id="toc"><li class="list-group-item font-weight-bold py-1 pr-0 mr-0 chulapa-toc-reset"><a href="#navbars">Navbars</a></li><li class="list-group-item font-weight-bold py-1 pr-0 mr-0 chulapa-toc-reset"><a href="#buttons">Buttons</a></li><li class="list-group-item font-weight-bold py-1 pr-0 mr-0 chulapa-toc-reset"><a href="#typography">Typography</a><ul><li class="list-group-item font-weight-bold py-1 pr-0 mr-0 chulapa-toc-reset"><a href="#type-blockquotes">Blockquotes</a></li></ul></li><li class="list-group-item font-weight-bold py-1 pr-0 mr-0 chulapa-toc-reset"><a href="#tables">Tables</a></li><li class="list-group-item font-weight-bold py-1 pr-0 mr-0 chulapa-toc-reset"><a href="#forms">Forms</a></li><li class="list-group-item font-weight-bold py-1 pr-0 mr-0 chulapa-toc-reset"><a href="#navs">Navs</a><ul><li class="list-group-item font-weight-bold py-1 pr-0 mr-0 chulapa-toc-reset"><a href="#nav-tabs">Tabs</a></li><li class="list-group-item font-weight-bold py-1 pr-0 mr-0 chulapa-toc-reset"><a href="#nav-pills">Pills</a></li><li class="list-group-item font-weight-bold py-1 pr-0 mr-0 chulapa-toc-reset"><a href="#nav-breadcrumbs">Breadcrumbs</a></li><li class="list-group-item font-weight-bold py-1 pr-0 mr-0 chulapa-toc-reset"><a href="#pagination">Pagination</a></li></ul></li><li class="list-group-item font-weight-bold py-1 pr-0 mr-0 chulapa-toc-reset"><a href="#indicators">Indicators</a></li><li class="list-group-item font-weight-bold py-1 pr-0 mr-0 chulapa-toc-reset"><a href="#progress">Progress</a><ul><li class="list-group-item font-weight-bold py-1 pr-0 mr-0 chulapa-toc-reset"><a href="#progress-basic">Basic</a></li><li class="list-group-item font-weight-bold py-1 pr-0 mr-0 chulapa-toc-reset"><a href="#progress-alternatives">Contextual alternatives</a></li><li class="list-group-item font-weight-bold py-1 pr-0 mr-0 chulapa-toc-reset"><a href="#progress-multiple">Multiple bars</a></li><li class="list-group-item font-weight-bold py-1 pr-0 mr-0 chulapa-toc-reset"><a href="#progress-striped">Striped</a><ul><li class="list-group-item font-weight-bold py-1 pr-0 mr-0 chulapa-toc-reset"><a href="#progress-animated">Animated</a></li></ul></li></ul></li><li class="list-group-item font-weight-bold py-1 pr-0 mr-0 chulapa-toc-reset"><a href="#containers">Containers</a></li><li class="list-group-item font-weight-bold py-1 pr-0 mr-0 chulapa-toc-reset"><a href="#dialogs">Dialogs</a></li><li class="list-group-item font-weight-bold py-1 pr-0 mr-0 chulapa-toc-reset"><a href="#chulapa-comp"><span class="chulapa">Chulapa</span> components</a></li></ul>
 			</nav>

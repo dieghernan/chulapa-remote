@@ -5,7 +5,7 @@
     <!--  MIT License-->
     <!-- Docs: https://dieghernan.github.io/chulapa -->
     <!-- Repo: https://github.com/dieghernan/chulapa -->
-    <!-- Page build 2022-12-09 18:02:42 +0000 -->
+    <!-- Page build 2022-12-10 20:32:57 +0000 -->
     <!--Google Structured Data-->
     <script type="application/ld+json">
         {
@@ -17,8 +17,8 @@
       },
       "headline": "Categories",
       "image": "https://github.com/dieghernan.png",
-      "datePublished": "2022-12-09T18:02:42+00:00",
-      "dateModified": "2022-12-09T18:02:42+00:00",
+      "datePublished": "2022-12-10T20:32:57+00:00",
+      "dateModified": "2022-12-10T20:32:57+00:00",
       "author": {
         "@type": "Person",
         "name": "dieghernan"
@@ -126,7 +126,7 @@
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
 <!-- end custom head snippets -->
 </head>
-<body class="d-flex flex-column">
+<body class="d-flex flex-column" id="body">
 	<nav class="navbar navbar-expand-md sticky-top navbar-chulapa" aria-labelledby="primary-navigation">
 	<div class="container-fluid mx-md-2">
 			<a class="navbar-brand font-weight-bold" href="https://dieghernan.github.io/chulapa-remote/">Home</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
@@ -179,6 +179,81 @@
 		<div class="row pt-2">
 			<aside class="col-lg-2 mt-lg-3 small"></aside>
 			<article id="maincontent" class="col-lg-8 mt-3">
+<style>
+.chulapa-btn-sidebar {
+  top: 60vh;
+  left: 0;
+  opacity: 0.4;
+  z-index: 1099;
+}
+.bs-canvas-overlay {
+   opacity: 0;
+   z-index: -1;
+}
+.bs-canvas-overlay.show {
+   opacity: 0.15;
+   z-index: 1100;
+}
+.bs-canvas {
+   top: 0;
+   width: 330px;
+   margin-left: -330px;
+   z-index: 1110;
+   overflow-x: hidden;
+   overflow-y: auto;
+}
+.bs-canvas-left {
+   left: 0;
+}
+.bs-canvas-anim {
+   transition: all .4s ease-out;
+   -webkit-transition: all .4s ease-out;
+   -moz-transition: all .4s ease-out;
+   -ms-transition: all .4s ease-out;
+}
+</style>
+     	<button class="close position-fixed chulapa-btn-sidebar disabled px-2" id='demo' onclick="openSideBar()" aria-label="Open Sidebar"><i class="fa-solid fa-bars-staggered"></i>
+        	<span class="sr-only">Open Sidebar</span>
+        </button>
+			<div class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed navbar-chulapa h-100" id='sideBar'>
+	<p class="p-3">
+        <button type="button" class=" 
+        navbar-text close" aria-label="Close" onclick="closeSideBar()"><i class="fa-solid fa-times"></i>
+        	<span class="sr-only">Close Sidebar</span></button>
+   </p>
+   <nav class="navbar-nav px-4 my-auto">
+			   </nav>   
+</div>
+<script>
+function openSideBar() {
+console.log(window.innerWidth);
+var iDiv = document.createElement('div');
+iDiv.classList.add('bs-canvas-overlay', 'bs-canvas-anim', 'bg-dark', 'position-fixed', 'w-100', 'h-100', 'show');
+iDiv.setAttribute('id', 'sideBarOverlay');
+iDiv.onclick = closeSideBar();
+document.getElementById("demo").classList.add('d-none');
+document.getElementById("body").classList.add('bs-canvas-anim');
+document.getElementById("body").style.overflowX ='hidden';
+if (window.innerWidth >= 576) {
+document.getElementById("body").style.marginLeft='330px';
+//document.getElementById("body").style.marginRight='-330px';
+} else {
+document.getElementById("body").prepend(iDiv);
+}
+document.getElementById("sideBar").style.marginLeft='0';
+return false
+}
+function closeSideBar() {
+document.getElementById("sideBar").removeAttribute('style');
+var sB = document.getElementById("sideBarOverlay");
+ if (sB) {
+   sB.remove();
+ }
+document.getElementById("body").removeAttribute('style');
+document.getElementById("demo").classList.remove('d-none');
+return false
+}
+</script>
 <div class="row g-0 pt-5" id="categories">
 <div class="col"><a href="#demo" class="btn btn-secondary m-1" role="button" style="font-size:  min(1.2rem , max(0.8rem , calc(1rem + 0.025*(9rem - 5rem))));"><i class="far fa-folder-open mr-2" aria-hidden="true"></i>demo<span class="badge rounded-pill chulapa-pill-bg-secondary ml-2">9</span></a><a href="#picture" class="btn btn-secondary m-1" role="button" style="font-size:  min(1.2rem , max(0.8rem , calc(1rem + 0.025*(3rem - 5rem))));"><i class="far fa-folder-open mr-2" aria-hidden="true"></i>picture<span class="badge rounded-pill chulapa-pill-bg-secondary ml-2">3</span></a><a href="#tutorial" class="btn btn-secondary m-1" role="button" style="font-size:  min(1.2rem , max(0.8rem , calc(1rem + 0.025*(2rem - 5rem))));"><i class="far fa-folder-open mr-2" aria-hidden="true"></i>tutorial<span class="badge rounded-pill chulapa-pill-bg-secondary ml-2">2</span></a><a href="#author-guest" class="btn btn-secondary m-1" role="button" style="font-size:  min(1.2rem , max(0.8rem , calc(1rem + 0.025*(2rem - 5rem))));"><i class="far fa-folder-open mr-2" aria-hidden="true"></i>author-guest<span class="badge rounded-pill chulapa-pill-bg-secondary ml-2">2</span></a><a href="#layout" class="btn btn-secondary m-1" role="button" style="font-size:  min(1.2rem , max(0.8rem , calc(1rem + 0.025*(2rem - 5rem))));"><i class="far fa-folder-open mr-2" aria-hidden="true"></i>layout<span class="badge rounded-pill chulapa-pill-bg-secondary ml-2">2</span></a><a href="#landing-page" class="btn btn-secondary m-1" role="button" style="font-size:  min(1.2rem , max(0.8rem , calc(1rem + 0.025*(1rem - 5rem))));"><i class="far fa-folder-open mr-2" aria-hidden="true"></i>landing-page<span class="badge rounded-pill chulapa-pill-bg-secondary ml-2">1</span></a><a href="#landingpage" class="btn btn-secondary m-1" role="button" style="font-size:  min(1.2rem , max(0.8rem , calc(1rem + 0.025*(1rem - 5rem))));"><i class="far fa-folder-open mr-2" aria-hidden="true"></i>landingpage<span class="badge rounded-pill chulapa-pill-bg-secondary ml-2">1</span></a></div>
 </div>
@@ -190,7 +265,7 @@
  <article class="chulapa-links-hover-only my-1 mb-4 row g-0">
    <div class="col">
      <h6><a href="https://dieghernan.github.io/chulapa-remote/demo/09-image-header">Image on header</a></h6><p>Transparencies work better</p><div class="small">
-        <i class="far fa-calendar" aria-hidden="true"></i> <time datetime="2022-12-09T18:02:42+00:00">december 09, 2022</time>
+        <i class="far fa-calendar" aria-hidden="true"></i> <time datetime="2022-12-10T20:32:57+00:00">december 10, 2022</time>
  | 
         <i class="far fa-clock" aria-hidden="true"></i> &lt; 1’<span class="ml-2 badge chulapa-pill-bg-body">demo</span></div>
    </div>
@@ -200,7 +275,7 @@
  <article class="chulapa-links-hover-only my-1 mb-4 row g-0">
    <div class="col">
      <h6><a href="https://dieghernan.github.io/chulapa-remote/demo/08-minimal">Layout minimal</a></h6><p>A blank canvas for you</p><div class="small">
-        <i class="far fa-calendar" aria-hidden="true"></i> <time datetime="2022-12-09T18:02:42+00:00">december 09, 2022</time>
+        <i class="far fa-calendar" aria-hidden="true"></i> <time datetime="2022-12-10T20:32:57+00:00">december 10, 2022</time>
  | 
         <i class="far fa-clock" aria-hidden="true"></i> &lt; 1’<span class="ml-2 badge chulapa-pill-bg-body">demo</span></div>
    </div>
@@ -210,7 +285,7 @@
  <article class="chulapa-links-hover-only my-1 mb-4 row g-0">
    <div class="col">
      <h6><a href="https://dieghernan.github.io/chulapa-remote/demo/02-plainpage-img">Plain page with image</a></h6><p>Expanding the layout</p><div class="small">
-        <i class="far fa-calendar" aria-hidden="true"></i> <time datetime="2022-12-09T18:02:42+00:00">december 09, 2022</time>
+        <i class="far fa-calendar" aria-hidden="true"></i> <time datetime="2022-12-10T20:32:57+00:00">december 10, 2022</time>
  | 
         <i class="far fa-clock" aria-hidden="true"></i> &lt; 1’<span class="ml-2 badge chulapa-pill-bg-body">demo</span></div>
    </div>
@@ -220,7 +295,7 @@
  <article class="chulapa-links-hover-only my-1 mb-4 row g-0">
    <div class="col">
      <h6><a href="https://dieghernan.github.io/chulapa-remote/demo/01-plainpage">Plain page</a></h6><div class="small">
-        <i class="far fa-calendar" aria-hidden="true"></i> <time datetime="2022-12-09T18:02:42+00:00">december 09, 2022</time>
+        <i class="far fa-calendar" aria-hidden="true"></i> <time datetime="2022-12-10T20:32:57+00:00">december 10, 2022</time>
  | 
         <i class="far fa-clock" aria-hidden="true"></i> &lt; 1’<span class="ml-2 badge chulapa-pill-bg-body">demo</span></div>
    </div>
@@ -318,7 +393,7 @@
  <article class="chulapa-links-hover-only my-1 mb-4 row g-0">
    <div class="col">
      <h6><a href="https://dieghernan.github.io/chulapa-remote/cheatsheets/02-kramdown-cheat-sheet">kramdown cheatsheet</a></h6><p>Beyond Markdown</p><div class="small">
-        <i class="far fa-calendar" aria-hidden="true"></i> <time datetime="2022-12-09T18:02:42+00:00">december 09, 2022</time>
+        <i class="far fa-calendar" aria-hidden="true"></i> <time datetime="2022-12-10T20:32:57+00:00">december 10, 2022</time>
  | 
         <i class="far fa-clock" aria-hidden="true"></i> 2’<span class="ml-2 badge chulapa-pill-bg-body">cheatsheet</span></div>
    </div>
@@ -326,7 +401,7 @@
  <article class="chulapa-links-hover-only my-1 mb-4 row g-0">
    <div class="col">
      <h6><a href="https://dieghernan.github.io/chulapa-remote/cheatsheets/01-markdown-cheat-sheet">Markdown cheatsheet</a></h6><p>The basic syntax of your page</p><div class="small">
-        <i class="far fa-calendar" aria-hidden="true"></i> <time datetime="2022-12-09T18:02:42+00:00">december 09, 2022</time>
+        <i class="far fa-calendar" aria-hidden="true"></i> <time datetime="2022-12-10T20:32:57+00:00">december 10, 2022</time>
  | 
         <i class="far fa-clock" aria-hidden="true"></i> 3’<span class="ml-2 badge chulapa-pill-bg-body">cheatsheet</span></div>
    </div>
@@ -368,7 +443,7 @@
  <article class="chulapa-links-hover-only my-1 mb-4 row g-0">
    <div class="col">
      <h6><a href="https://dieghernan.github.io/chulapa-remote/demo/09-image-header">Image on header</a></h6><p>Transparencies work better</p><div class="small">
-        <i class="far fa-calendar" aria-hidden="true"></i> <time datetime="2022-12-09T18:02:42+00:00">december 09, 2022</time>
+        <i class="far fa-calendar" aria-hidden="true"></i> <time datetime="2022-12-10T20:32:57+00:00">december 10, 2022</time>
  | 
         <i class="far fa-clock" aria-hidden="true"></i> &lt; 1’<span class="ml-2 badge chulapa-pill-bg-body">demo</span></div>
    </div>
@@ -378,7 +453,7 @@
  <article class="chulapa-links-hover-only my-1 mb-4 row g-0">
    <div class="col">
      <h6><a href="https://dieghernan.github.io/chulapa-remote/demo/08-minimal">Layout minimal</a></h6><p>A blank canvas for you</p><div class="small">
-        <i class="far fa-calendar" aria-hidden="true"></i> <time datetime="2022-12-09T18:02:42+00:00">december 09, 2022</time>
+        <i class="far fa-calendar" aria-hidden="true"></i> <time datetime="2022-12-10T20:32:57+00:00">december 10, 2022</time>
  | 
         <i class="far fa-clock" aria-hidden="true"></i> &lt; 1’<span class="ml-2 badge chulapa-pill-bg-body">demo</span></div>
    </div>

@@ -5,7 +5,7 @@
     <!--  MIT License-->
     <!-- Docs: https://dieghernan.github.io/chulapa -->
     <!-- Repo: https://github.com/dieghernan/chulapa -->
-    <!-- Page build 2022-12-09 18:02:42 +0000 -->
+    <!-- Page build 2022-12-10 20:32:57 +0000 -->
     <!--Google Structured Data-->
     <script type="application/ld+json">
         {
@@ -129,7 +129,7 @@
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
 <!-- end custom head snippets -->
 </head>
-<body class="d-flex flex-column">
+<body class="d-flex flex-column" id="body">
 	<nav class="navbar navbar-expand-md sticky-top navbar-chulapa" aria-labelledby="primary-navigation">
 	<div class="container-fluid mx-md-2">
 			<a class="navbar-brand font-weight-bold" href="https://dieghernan.github.io/chulapa-remote/">Home</a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
@@ -203,6 +203,81 @@
 				</div>
 </aside>
 			<article id="maincontent" class="col-lg-8 mt-3">
+<style>
+.chulapa-btn-sidebar {
+  top: 60vh;
+  left: 0;
+  opacity: 0.4;
+  z-index: 1099;
+}
+.bs-canvas-overlay {
+   opacity: 0;
+   z-index: -1;
+}
+.bs-canvas-overlay.show {
+   opacity: 0.15;
+   z-index: 1100;
+}
+.bs-canvas {
+   top: 0;
+   width: 330px;
+   margin-left: -330px;
+   z-index: 1110;
+   overflow-x: hidden;
+   overflow-y: auto;
+}
+.bs-canvas-left {
+   left: 0;
+}
+.bs-canvas-anim {
+   transition: all .4s ease-out;
+   -webkit-transition: all .4s ease-out;
+   -moz-transition: all .4s ease-out;
+   -ms-transition: all .4s ease-out;
+}
+</style>
+     	<button class="close position-fixed chulapa-btn-sidebar disabled px-2" id='demo' onclick="openSideBar()" aria-label="Open Sidebar"><i class="fa-solid fa-bars-staggered"></i>
+        	<span class="sr-only">Open Sidebar</span>
+        </button>
+			<div class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed navbar-chulapa h-100" id='sideBar'>
+	<p class="p-3">
+        <button type="button" class=" 
+        navbar-text close" aria-label="Close" onclick="closeSideBar()"><i class="fa-solid fa-times"></i>
+        	<span class="sr-only">Close Sidebar</span></button>
+   </p>
+   <nav class="navbar-nav px-4 my-auto">
+			   </nav>   
+</div>
+<script>
+function openSideBar() {
+console.log(window.innerWidth);
+var iDiv = document.createElement('div');
+iDiv.classList.add('bs-canvas-overlay', 'bs-canvas-anim', 'bg-dark', 'position-fixed', 'w-100', 'h-100', 'show');
+iDiv.setAttribute('id', 'sideBarOverlay');
+iDiv.onclick = closeSideBar();
+document.getElementById("demo").classList.add('d-none');
+document.getElementById("body").classList.add('bs-canvas-anim');
+document.getElementById("body").style.overflowX ='hidden';
+if (window.innerWidth >= 576) {
+document.getElementById("body").style.marginLeft='330px';
+//document.getElementById("body").style.marginRight='-330px';
+} else {
+document.getElementById("body").prepend(iDiv);
+}
+document.getElementById("sideBar").style.marginLeft='0';
+return false
+}
+function closeSideBar() {
+document.getElementById("sideBar").removeAttribute('style');
+var sB = document.getElementById("sideBarOverlay");
+ if (sB) {
+   sB.remove();
+ }
+document.getElementById("body").removeAttribute('style');
+document.getElementById("demo").classList.remove('d-none');
+return false
+}
+</script>
 			<p>Under what circumstances should we step off a path? When is it essential that we finish what we start? If I bought a bag of peanuts and had an allergic reaction, no one would fault me if I threw it out. If I ended a relationship with a woman who hit me, no one would say that I had a commitment problem. But if I walk away from a seemingly secure route because my soul has other ideas, I am a flake?</p>
 <p>The truth is that no one else can definitively know the path we are here to walk. It’s tempting to listen—many of us long for the omnipotent other—but unless they are genuine psychic intuitives, they can’t know. All others can know is their own truth, and if they’ve actually done the work to excavate it, they will have the good sense to know that they cannot genuinely know anyone else’s. Only soul knows the path it is here to walk. Since you are the only one living in your temple, only you can know its scriptures and interpretive structure.</p>
 <p>At the heart of the struggle are two very different ideas of success—survival-driven and soul-driven. For survivalists, success is security, pragmatism, power over others. Success is the absence of material suffering, the nourishing of the soul be damned. It is an odd and ironic thing that most of the material power in our world often resides in the hands of younger souls. Still working in the egoic and material realms, they love the sensations of power and focus most of their energy on accumulation. Older souls tend not to be as materially driven. They have already played the worldly game in previous lives and they search for more subtle shades of meaning in this one—authentication rather than accumulation. They are often ignored by the culture at large, although they really are the truest warriors.</p>
