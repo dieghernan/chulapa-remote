@@ -5,7 +5,7 @@
     <!--  MIT License-->
     <!-- Docs: https://dieghernan.github.io/chulapa -->
     <!-- Repo: https://github.com/dieghernan/chulapa -->
-    <!-- Page build 2022-12-10 21:33:38 +0000 -->
+    <!-- Page build 2022-12-10 21:56:24 +0000 -->
     <!--Google Structured Data-->
     <script type="application/ld+json">
         {
@@ -17,8 +17,8 @@
       },
       "headline": "Syntax highlighting demo",
       "image": "https://github.com/dieghernan.png",
-      "datePublished": "2022-12-10T21:33:38+00:00",
-      "dateModified": "2022-12-10T21:33:38+00:00",
+      "datePublished": "2022-12-10T21:56:24+00:00",
+      "dateModified": "2022-12-10T21:56:24+00:00",
       "author": {
         "@type": "Person",
         "name": "dieghernan"
@@ -116,6 +116,7 @@
     <!-- v6 -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6/css/all.min.css">
     <!-- Theme css (Bootstrap included) -->
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/dieghernan/chulapa@master/assets/js/chulapa_script.min.js" as="script" />
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/dieghernan/chulapa@master/assets/fonts/Chulapa/Chulapa-Bold_vmod.otf" as="font" type="font/otf" crossorigin>
   <link rel="stylesheet" id="maincss" href="https://dieghernan.github.io/chulapa-remote/assets/css/main.css" >
     <!-- Highlighter -->
@@ -168,8 +169,14 @@
 .chulapa-btn-sidebar {
   top: 80vh;
   left: 0;
-  opacity: 0.4;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.4s linear;
   z-index: 1099;
+}
+.chulapa-btn-sidebar.has-toc {
+  visibility: visible;
+  opacity: 0.4;
 }
 .bs-canvas-overlay {
    opacity: 0;
@@ -214,6 +221,7 @@ function cleanup() {
   var sB = document.getElementById("sidetoc");
  if (sB) {
    document.getElementById("demo").classList.remove('d-none');
+   document.getElementById("demo").classList.add('has-toc');
  } else {
    document.getElementById("sideBar").remove();
  }
