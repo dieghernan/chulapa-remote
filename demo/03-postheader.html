@@ -5,7 +5,7 @@
     <!--  MIT License-->
     <!-- Docs: https://dieghernan.github.io/chulapa -->
     <!-- Repo: https://github.com/dieghernan/chulapa -->
-    <!-- Page build 2022-12-11 07:28:24 +0000 -->
+    <!-- Page build 2022-12-11 07:29:59 +0000 -->
     <!--Google Structured Data-->
     <script type="application/ld+json">
         {
@@ -271,10 +271,6 @@ function openSideBar() {
 function closeSideBar() {
   document.getElementById("sideBar").removeAttribute('style');
   var btn = document.getElementById("demo");
-  var sB = document.getElementById("sideBarOverlay");
-  if (sB) {
-    sB.remove();
-  }
   document.getElementById("body").removeAttribute('style');
   btn.classList.remove('d-none');
   btn.setAttribute("aria-expanded", 'false');
