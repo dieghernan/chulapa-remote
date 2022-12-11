@@ -5,7 +5,7 @@
     <!--  MIT License-->
     <!-- Docs: https://dieghernan.github.io/chulapa -->
     <!-- Repo: https://github.com/dieghernan/chulapa -->
-    <!-- Page build 2022-12-11 08:21:19 +0000 -->
+    <!-- Page build 2022-12-11 09:41:51 +0000 -->
     <!--Google Structured Data-->
     <script type="application/ld+json">
         {
@@ -17,8 +17,8 @@
       },
       "headline": "Archive",
       "image": "https://github.com/dieghernan.png",
-      "datePublished": "2022-12-11T08:21:19+00:00",
-      "dateModified": "2022-12-11T08:21:19+00:00",
+      "datePublished": "2022-12-11T09:41:51+00:00",
+      "dateModified": "2022-12-11T09:41:51+00:00",
       "author": {
         "@type": "Person",
         "name": "dieghernan"
@@ -182,16 +182,37 @@
 			<article id="maincontent" class="col-lg-8 mt-3">
 <style>
 .chulapa-btn-sidebar {
-  top: 50vh;
+  top: 75vh;
   left: 0;
   visibility: hidden;
   opacity: 0;
   transition: visibility 0s, opacity 0.4s linear;
   z-index: 1099;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
 }
 .chulapa-btn-sidebar.has-toc {
   visibility: visible;
   opacity: 0.4;
+}
+.chulapa-btn-nofocus.close {
+  text-shadow: none;
+  opacity:0.6;
+}
+.chulapa-btn-nofocus.close:before {    
+    content: "" !important;
+}
+.chulapa-btn-nofocus:focus {
+    outline: 0;
+	text-shadow: none;
+}
+.bs-canvas-overlay {
+   opacity: 0;
+   z-index: -1;
+}
+.bs-canvas-overlay.show {
+   opacity: 0.3;
+   z-index: 1110;
 }
 .bs-canvas {
    top: 0;
@@ -211,47 +232,63 @@
    -ms-transition: all .4s ease-out;
 }
 </style>
-     	<button class="close position-fixed chulapa-btn-sidebar disabled px-2 d-none" id='demo' onclick="openSideBar()" aria-label="Open Sidebar" aria-expanded="false" aria-controls="sideBar"><i class="fa-solid fa-plus"></i>
-        	<span class="sr-only">Open Sidebar</span>
-        </button>
-			<div class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed navbar-chulapa h-100" id='sideBar'>
-	<p class="p-2">
-        <button type="button" class=" 
-        navbar-text close" aria-label="Close" onclick="closeSideBar()"><i class="fa-solid fa-times"></i>
-        	<span class="sr-only">Close Sidebar</span></button>
-   </p>
-   <nav class="navbar-nav px-2 my-auto">
-			   </nav>   
-</div>
+	<button class="btn btn-primary btn-sm rounded-right position-fixed chulapa-btn-sidebar d-none chulapa-btn-nofocus" id='demo' onclick="openSideBar()" aria-label="Open Sidebar" aria-expanded="false" aria-controls="sideBar">
+		<i class="fa-solid fa-plus"></i><span class="sr-only">Open Sidebar</span>
+	</button>
+	<div class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed navbar-chulapa h-100" id='sideBar'>
+		<p class="p-2">
+			<button type="button" class="navbar-text close chulapa-btn-nofocus" aria-label="Close" onclick="closeSideBar()">
+				<i class="fa-solid fa-times"></i><span class="sr-only">Close Sidebar</span>
+			</button>
+		</p>
+		<nav class="navbar-nav px-2 my-auto">		
+		</nav>   
+	</div>
 <script>
-function cleanup() {
+function setupSideBar() {
   var sT = document.getElementById("sidetoc");
   var btn = document.getElementById("demo");
- if (sT) {
-   btn.classList.remove("d-none");
-   btn.classList.add("has-toc");
- } else {
-   document.getElementById("sideBar").remove();
- }
+  var body = document.getElementById("body");
+  // Create hidden overlay
+  var iDiv = document.createElement("div");
+  if (sT) {
+    btn.classList.remove("d-none");
+    btn.classList.add("has-toc");
+    body.classList.add("bs-canvas-anim");
+    iDiv.classList.add("bs-canvas-overlay", "bg-dark", "position-fixed",
+      "w-100", "h-100");
+    iDiv.setAttribute("id", "sideBarOverlay");
+    iDiv.setAttribute("onclick", "closeSideBar()");
+    body.prepend(iDiv);
+  } else {
+    document.getElementById("sideBar")
+      .remove();
+  }
 }
-window.addEventListener("load", cleanup);
+window.addEventListener("load", setupSideBar);
 function openSideBar() {
   var btn = document.getElementById("demo");
   var body = document.getElementById("body");
-  btn.classList.add('d-none');
-  btn.setAttribute("aria-expanded", 'true');
-  body.classList.add('bs-canvas-anim');
-  body.style.overflowX = 'hidden';
-    body.style.marginLeft = '300px';
-    body.style.marginRight = '-300px';
-  document.getElementById("sideBar").style.marginLeft = '0';
+  btn.classList.add("d-none");
+  btn.setAttribute("aria-expanded", "true");
+  document.getElementById("sideBarOverlay")
+    .classList.add("show");
+  body.style.overflowX = "hidden";
+  body.style.marginLeft = "300px";
+  body.style.marginRight = "-300px";
+  document.getElementById("sideBar")
+    .style.marginLeft = "0";
 }
 function closeSideBar() {
-  document.getElementById("sideBar").removeAttribute('style');
   var btn = document.getElementById("demo");
-  document.getElementById("body").removeAttribute('style');
-  btn.classList.remove('d-none');
-  btn.setAttribute("aria-expanded", 'false');
+  document.getElementById("sideBar")
+    .removeAttribute("style");
+  document.getElementById("sideBarOverlay")
+    .classList.remove("show");
+  document.getElementById("body")
+    .removeAttribute("style");
+  btn.classList.remove("d-none");
+  btn.setAttribute("aria-expanded", "false");
 }
 </script>
 <div class="row row-cols-1 row-cols-sm-2 pt-5 mx-n1" id="years"><div class="col-sm-6 chulapa-links-hover-only py-2">
@@ -286,7 +323,7 @@ function closeSideBar() {
 			<article class="col">
 				<h6 class="my-2"><a href="https://dieghernan.github.io/chulapa-remote/demo/11-syntax-highligting" class="chulapa-text-body-color">Syntax highlighting</a></h6>
 				<p class="small mb-1">
-				  <time datetime="2022-12-11T08:21:19+00:00">sunday, 11</time>
+				  <time datetime="2022-12-11T09:41:51+00:00">sunday, 11</time>
 			  <span class="mx-1 my-1 badge chulapa-pill-bg-body">demo</span></p>
 			</article></div>
 	</div>
@@ -295,7 +332,7 @@ function closeSideBar() {
 			<article class="col">
 				<h6 class="my-2"><a href="https://dieghernan.github.io/chulapa-remote/demo/11-demo-youtube-lazy" class="chulapa-text-body-color">11_demo_youtube_lazy</a></h6>
 				<p class="small mb-1">
-				  <time datetime="2022-12-11T08:21:19+00:00">sunday, 11</time>
+				  <time datetime="2022-12-11T09:41:51+00:00">sunday, 11</time>
 			  <span class="mx-1 my-1 badge chulapa-pill-bg-body">demo</span></p>
 			</article></div>
 	</div>
@@ -304,7 +341,7 @@ function closeSideBar() {
 			<article class="col">
 				<h6 class="my-2"><a href="https://dieghernan.github.io/chulapa-remote/demo/10-a-video" class="chulapa-text-body-color">Include a video</a></h6>
 				<p class="small mb-1">
-				  <time datetime="2022-12-11T08:21:19+00:00">sunday, 11</time>
+				  <time datetime="2022-12-11T09:41:51+00:00">sunday, 11</time>
 			  <span class="mx-1 my-1 badge chulapa-pill-bg-body">demo</span></p>
 			</article></div>
 	</div>
@@ -313,7 +350,7 @@ function closeSideBar() {
 			<article class="col">
 				<h6 class="my-2"><a href="https://dieghernan.github.io/chulapa-remote/demo/09-image-header" class="chulapa-text-body-color">Image on header</a></h6>
 				<p class="small mb-1">
-				  <time datetime="2022-12-11T08:21:19+00:00">sunday, 11</time>
+				  <time datetime="2022-12-11T09:41:51+00:00">sunday, 11</time>
 			  <span class="mx-1 my-1 badge chulapa-pill-bg-body">demo</span></p>
 			</article><a href="https://dieghernan.github.io/chulapa-remote/demo/09-image-header" class="col-2 ml-2 btn chulapa-overlay-img chulapa-gradient" style="background-image: url('https://dieghernan.github.io/chulapa/assets/img/site/transparent.png')"></a></div>
 	</div>
@@ -322,7 +359,7 @@ function closeSideBar() {
 			<article class="col">
 				<h6 class="my-2"><a href="https://dieghernan.github.io/chulapa-remote/demo/08-minimal" class="chulapa-text-body-color">Layout minimal</a></h6>
 				<p class="small mb-1">
-				  <time datetime="2022-12-11T08:21:19+00:00">sunday, 11</time>
+				  <time datetime="2022-12-11T09:41:51+00:00">sunday, 11</time>
 			  <span class="mx-1 my-1 badge chulapa-pill-bg-body">demo</span></p>
 			</article><a href="https://dieghernan.github.io/chulapa-remote/demo/08-minimal" class="col-2 ml-2 btn chulapa-overlay-img chulapa-gradient" style="background-image: url('https://dieghernan.github.io/chulapa/assets/img/gallery/city-spain-dense-17658.jpg')"></a></div>
 	</div>
@@ -331,7 +368,7 @@ function closeSideBar() {
 			<article class="col">
 				<h6 class="my-2"><a href="https://dieghernan.github.io/chulapa-remote/demo/02-plainpage-img" class="chulapa-text-body-color">Plain page with image</a></h6>
 				<p class="small mb-1">
-				  <time datetime="2022-12-11T08:21:19+00:00">sunday, 11</time>
+				  <time datetime="2022-12-11T09:41:51+00:00">sunday, 11</time>
 			  <span class="mx-1 my-1 badge chulapa-pill-bg-body">demo</span></p>
 			</article><a href="https://dieghernan.github.io/chulapa-remote/demo/02-plainpage-img" class="col-2 ml-2 btn chulapa-overlay-img chulapa-gradient" style="background-image: url('https://dieghernan.github.io/chulapa/assets/img/gallery/black-metal-post-with-sad-face-paint-3314301.jpg')"></a></div>
 	</div>
@@ -340,7 +377,7 @@ function closeSideBar() {
 			<article class="col">
 				<h6 class="my-2"><a href="https://dieghernan.github.io/chulapa-remote/demo/01-plainpage" class="chulapa-text-body-color">Plain page</a></h6>
 				<p class="small mb-1">
-				  <time datetime="2022-12-11T08:21:19+00:00">sunday, 11</time>
+				  <time datetime="2022-12-11T09:41:51+00:00">sunday, 11</time>
 			  <span class="mx-1 my-1 badge chulapa-pill-bg-body">demo</span></p>
 			</article></div>
 	</div>
@@ -349,7 +386,7 @@ function closeSideBar() {
 			<article class="col">
 				<h6 class="my-2"><a href="https://dieghernan.github.io/chulapa-remote/cheatsheets/02-kramdown-cheat-sheet" class="chulapa-text-body-color">kramdown cheatsheet</a></h6>
 				<p class="small mb-1">
-				  <time datetime="2022-12-11T08:21:19+00:00">sunday, 11</time>
+				  <time datetime="2022-12-11T09:41:51+00:00">sunday, 11</time>
 			  <span class="mx-1 my-1 badge chulapa-pill-bg-body">cheatsheet</span></p>
 			</article></div>
 	</div>
@@ -358,7 +395,7 @@ function closeSideBar() {
 			<article class="col">
 				<h6 class="my-2"><a href="https://dieghernan.github.io/chulapa-remote/cheatsheets/01-markdown-cheat-sheet" class="chulapa-text-body-color">Markdown cheatsheet</a></h6>
 				<p class="small mb-1">
-				  <time datetime="2022-12-11T08:21:19+00:00">sunday, 11</time>
+				  <time datetime="2022-12-11T09:41:51+00:00">sunday, 11</time>
 			  <span class="mx-1 my-1 badge chulapa-pill-bg-body">cheatsheet</span></p>
 			</article></div>
 	</div>
