@@ -116,12 +116,6 @@ function closeSideBar() {
   document.getElementById("sideBar").removeAttribute('style');
 
   var btn = document.getElementById("demo");
-  var sB = document.getElementById("sideBarOverlay");
-
-  if (sB) {
-    sB.remove();
-  }
-
   document.getElementById("body").removeAttribute('style');
 
   btn.classList.remove('d-none');
