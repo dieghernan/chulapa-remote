@@ -5,7 +5,7 @@
     <!--  MIT License-->
     <!-- Docs: https://dieghernan.github.io/chulapa -->
     <!-- Repo: https://github.com/dieghernan/chulapa -->
-    <!-- Page build 2022-12-10 21:56:24 +0000 -->
+    <!-- Page build 2022-12-11 07:22:22 +0000 -->
     <!--Google Structured Data-->
     <script type="application/ld+json">
         {
@@ -205,13 +205,13 @@ comments, mathjax and a modified date.
    z-index: -1;
 }
 .bs-canvas-overlay.show {
-   opacity: 0.15;
+   opacity: 0.3;
    z-index: 1100;
 }
 .bs-canvas {
    top: 0;
-   width: 330px;
-   margin-left: -330px;
+   width: 300px;
+   margin-left: -300px;
    z-index: 1110;
    overflow-x: hidden;
    overflow-y: auto;
@@ -240,44 +240,45 @@ comments, mathjax and a modified date.
 </div>
 <script>
 function cleanup() {
-  var sB = document.getElementById("sidetoc");
- if (sB) {
-   document.getElementById("demo").classList.remove('d-none');
-   document.getElementById("demo").classList.add('has-toc');
+  var sT = document.getElementById("sidetoc");
+  var btn = document.getElementById("demo");
+ if (sT) {
+   btn.classList.remove("d-none");
+   btn.classList.add("has-toc");
  } else {
    document.getElementById("sideBar").remove();
  }
 }
-window.addEventListener('load', cleanup);
+window.addEventListener("load", cleanup);
 function openSideBar() {
-console.log(window.innerWidth);
-var iDiv = document.createElement('div');
-iDiv.classList.add('bs-canvas-overlay', 'bs-canvas-anim', 'bg-dark', 'position-fixed', 'w-100', 'h-100', 'show');
-iDiv.setAttribute('id', 'sideBarOverlay');
-iDiv.onclick = closeSideBar();
-document.getElementById("demo").classList.add('d-none');
-document.getElementById("demo").setAttribute("aria-expanded", 'true');
-document.getElementById("body").classList.add('bs-canvas-anim');
-document.getElementById("body").style.overflowX ='hidden';
-if (window.innerWidth >= 576) {
-document.getElementById("body").style.marginLeft='330px';
-document.getElementById("body").style.marginRight='-330px';
-} else {
-document.getElementById("body").prepend(iDiv);
-}
-document.getElementById("sideBar").style.marginLeft='0';
-return false
+  var btn = document.getElementById("demo");
+  var body = document.getElementById("body");
+  var iDiv = document.createElement('div');
+  iDiv.classList.add('bs-canvas-overlay', 'bs-canvas-anim', 'bg-primary', 'position-fixed', 'w-100', 'h-100', 'show');
+  iDiv.setAttribute('id', 'sideBarOverlay');
+  iDiv.onclick = closeSideBar();
+  btn.classList.add('d-none');
+  btn.setAttribute("aria-expanded", 'true');
+  body.classList.add('bs-canvas-anim');
+  body.style.overflowX = 'hidden';
+  if (window.innerWidth >= 576) {
+    body.style.marginLeft = '300px';
+    body.style.marginRight = '-300px';
+  } else {
+    body.prepend(iDiv);
+  }
+  document.getElementById("sideBar").style.marginLeft = '0';
 }
 function closeSideBar() {
-document.getElementById("sideBar").removeAttribute('style');
-var sB = document.getElementById("sideBarOverlay");
- if (sB) {
-   sB.remove();
- }
-document.getElementById("body").removeAttribute('style');
-document.getElementById("demo").classList.remove('d-none');
-document.getElementById("demo").setAttribute("aria-expanded", 'false');
-return false
+  document.getElementById("sideBar").removeAttribute('style');
+  var btn = document.getElementById("demo");
+  var sB = document.getElementById("sideBarOverlay");
+  if (sB) {
+    sB.remove();
+  }
+  document.getElementById("body").removeAttribute('style');
+  btn.classList.remove('d-none');
+  btn.setAttribute("aria-expanded", 'false');
 }
 </script>
 			<p>This page shows the <code class="language-plaintext highlighter-rouge">hero</code> header with a project button. It also has enabled 
