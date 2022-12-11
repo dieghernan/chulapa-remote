@@ -82,12 +82,12 @@ layout: minimal
 		<i class="fa-solid fa-plus"></i><span class="sr-only">Open Sidebar</span>
 	</button>
 	<div class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed navbar-chulapa h-100" id='sideBar'>
-		<p class="py-2 px-3">
+		<p class="pt-2 pb-1 px-3">
 			<button type="button" class="navbar-text close chulapa-btn-nofocus" aria-label="Close" onclick="closeSideBar()">
 				<i class="fa-solid fa-times"></i><span class="sr-only">Close Sidebar</span>
 			</button>
 		</p>
-		<nav class="navbar-nav px-3 my-auto">		
+		<nav class="navbar-nav px-3 my-auto">		   <p class="mb-2" ><a class="navbar-brand" href="#">{{ page.title }}</a></p>		
 			{% include components/toc.html sanitize=false html=content h_min=h_min h_max=h_max skip_no_ids=true id="sidetoc" class="nav.flex-column" item_class="nav-item.nav.d-block" anchor_class="nav-link" %}
 		</nav>    
 	</div>
