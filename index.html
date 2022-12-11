@@ -5,7 +5,7 @@
     <!--  MIT License-->
     <!-- Docs: https://dieghernan.github.io/chulapa -->
     <!-- Repo: https://github.com/dieghernan/chulapa -->
-    <!-- Page build 2022-12-11 07:22:22 +0000 -->
+    <!-- Page build 2022-12-11 07:28:24 +0000 -->
     <!--Google Structured Data-->
     <script type="application/ld+json">
         {
@@ -195,14 +195,6 @@
   visibility: visible;
   opacity: 0.4;
 }
-.bs-canvas-overlay {
-   opacity: 0;
-   z-index: -1;
-}
-.bs-canvas-overlay.show {
-   opacity: 0.3;
-   z-index: 1100;
-}
 .bs-canvas {
    top: 0;
    width: 300px;
@@ -248,20 +240,12 @@ window.addEventListener("load", cleanup);
 function openSideBar() {
   var btn = document.getElementById("demo");
   var body = document.getElementById("body");
-  var iDiv = document.createElement('div');
-  iDiv.classList.add('bs-canvas-overlay', 'bs-canvas-anim', 'bg-primary', 'position-fixed', 'w-100', 'h-100', 'show');
-  iDiv.setAttribute('id', 'sideBarOverlay');
-  iDiv.onclick = closeSideBar();
   btn.classList.add('d-none');
   btn.setAttribute("aria-expanded", 'true');
   body.classList.add('bs-canvas-anim');
   body.style.overflowX = 'hidden';
-  if (window.innerWidth >= 576) {
     body.style.marginLeft = '300px';
     body.style.marginRight = '-300px';
-  } else {
-    body.prepend(iDiv);
-  }
   document.getElementById("sideBar").style.marginLeft = '0';
 }
 function closeSideBar() {
@@ -300,8 +284,8 @@ function closeSideBar() {
 <p>
 Try change Tango Echo India 2020-01-21
 # El Quijote en España
-- 2022-12-11 07:22:29 UTC
-2022-12-11 07:20:59 UTC
+- 2022-12-11 07:28:30 UTC
+2022-12-11 07:27:00 UTC
 And an inline code `here see how to get along with this`
 Click [**Use this template**](https://github.com/dieghernan/chulapa-101/generate) button above for cloning this repo and get started with [Chulapa Jekyll theme](https://github.com/dieghernan/chulapa).
 Contains basic configuration to get you a site with:
