@@ -31,18 +31,6 @@ layout: minimal
 
 }
 
-
-.bs-canvas-overlay {
-   opacity: 0;
-   z-index: -1;
-}
-
-.bs-canvas-overlay.show {
-   opacity: 0.3;
-   z-index: 1100;
-}
-
-
 .bs-canvas {
    top: 0;
    width: 300px;
@@ -106,10 +94,6 @@ function openSideBar() {
 
   var btn = document.getElementById("demo");
   var body = document.getElementById("body");
-  var iDiv = document.createElement('div');
-  iDiv.classList.add('bs-canvas-overlay', 'bs-canvas-anim', 'bg-primary', 'position-fixed', 'w-100', 'h-100', 'show');
-  iDiv.setAttribute('id', 'sideBarOverlay');
-  iDiv.onclick = closeSideBar();
 
   btn.classList.add('d-none');
 
@@ -117,12 +101,10 @@ function openSideBar() {
 
   body.classList.add('bs-canvas-anim');
   body.style.overflowX = 'hidden';
-  if (window.innerWidth >= 576) {
+  
     body.style.marginLeft = '300px';
     body.style.marginRight = '-300px';
-  } else {
-    body.prepend(iDiv);
-  }
+
   document.getElementById("sideBar").style.marginLeft = '0';
   
 }
