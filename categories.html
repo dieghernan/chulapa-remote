@@ -5,7 +5,7 @@
     <!--  MIT License-->
     <!-- Docs: https://dieghernan.github.io/chulapa -->
     <!-- Repo: https://github.com/dieghernan/chulapa -->
-    <!-- Page build 2022-12-14 07:39:20 +0000 -->
+    <!-- Page build 2022-12-14 10:51:32 +0000 -->
     <!--Google Structured Data-->
     <script type="application/ld+json">
         {
@@ -17,8 +17,8 @@
       },
       "headline": "Categories",
       "image": "https://github.com/dieghernan.png",
-      "datePublished": "2022-12-14T07:39:20+00:00",
-      "dateModified": "2022-12-14T07:39:20+00:00",
+      "datePublished": "2022-12-14T10:51:32+00:00",
+      "dateModified": "2022-12-14T10:51:32+00:00",
       "author": {
         "@type": "Person",
         "name": "dieghernan"
@@ -180,117 +180,6 @@
 		<div class="row pt-2">
 			<aside class="col-lg-2 mt-lg-3 small"></aside>
 			<article id="maincontent" class="col-lg-8 mt-3">
-<style>
-.chulapa-btn-sidebar {
-  top: 75vh;
-  left: 0;
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s, opacity 0.4s linear;
-  z-index: 1099;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-}
-.chulapa-btn-sidebar.has-toc {
-  visibility: visible;
-  opacity: 0.4;
-}
-.chulapa-btn-nofocus.close {
-  text-shadow: none;
-  opacity:0.6;
-}
-.chulapa-btn-nofocus.close:before {    
-    content: "" !important;
-}
-.chulapa-btn-nofocus:focus {
-    outline: 0;
-	text-shadow: none;
-}
-.bs-canvas-overlay {
-   opacity: 0;
-   z-index: -1;
-}
-.bs-canvas-overlay.show {
-   opacity: 0.3;
-   z-index: 1110;
-}
-.bs-canvas {
-   top: 0;
-   width: 300px;
-   margin-left: -300px;
-   z-index: 1110;
-   overflow-x: hidden;
-   overflow-y: auto;
-}
-.bs-canvas-left {
-   left: 0;
-}
-.bs-canvas-anim {
-   transition: all .4s ease-out;
-   -webkit-transition: all .4s ease-out;
-   -moz-transition: all .4s ease-out;
-   -ms-transition: all .4s ease-out;
-}
-</style>
-	<button class="btn btn-primary btn-sm rounded-right position-fixed chulapa-btn-sidebar d-none chulapa-btn-nofocus" id='demo' onclick="openSideBar()" aria-label="Open Sidebar" aria-expanded="false" aria-controls="sideBar">
-		<i class="fa-solid fa-plus"></i><span class="sr-only">Open Sidebar</span>
-	</button>
-	<div class="bs-canvas bs-canvas-anim bs-canvas-left position-fixed navbar-chulapa h-100" id='sideBar'>
-		<p class="pt-2 pb-1 px-3">
-			<button type="button" class="navbar-text close chulapa-btn-nofocus" aria-label="Close" onclick="closeSideBar()">
-				<i class="fa-solid fa-times"></i><span class="sr-only">Close Sidebar</span>
-			</button>
-		</p>
-		<nav class="navbar-nav px-3 my-auto">		  <p class="mb-2" ><a class="navbar-brand" href="#">Categories</a></p>		
-		</nav>   
-	</div>
-<script>
-function setupSideBar() {
-  var sT = document.getElementById("sidetoc");
-  var btn = document.getElementById("demo");
-  var body = document.getElementById("body");
-  // Create hidden overlay
-  var iDiv = document.createElement("div");
-  if (sT) {
-    btn.classList.remove("d-none");
-    btn.classList.add("has-toc");
-    body.classList.add("bs-canvas-anim");
-    iDiv.classList.add("bs-canvas-overlay", "bg-dark", "position-fixed",
-      "w-100", "h-100");
-    iDiv.setAttribute("id", "sideBarOverlay");
-    iDiv.setAttribute("onclick", "closeSideBar()");
-    body.prepend(iDiv);
-  } else {
-    document.getElementById("sideBar")
-      .remove();
-  }
-}
-window.addEventListener("load", setupSideBar);
-function openSideBar() {
-  var btn = document.getElementById("demo");
-  var body = document.getElementById("body");
-  btn.classList.add("d-none");
-  btn.setAttribute("aria-expanded", "true");
-  document.getElementById("sideBarOverlay")
-    .classList.add("show");
-  body.style.overflowX = "hidden";
-  body.style.marginLeft = "300px";
-  body.style.marginRight = "-300px";
-  document.getElementById("sideBar")
-    .style.marginLeft = "0";
-}
-function closeSideBar() {
-  var btn = document.getElementById("demo");
-  document.getElementById("sideBar")
-    .removeAttribute("style");
-  document.getElementById("sideBarOverlay")
-    .classList.remove("show");
-  document.getElementById("body")
-    .removeAttribute("style");
-  btn.classList.remove("d-none");
-  btn.setAttribute("aria-expanded", "false");
-}
-</script>
 <div class="row g-0 pt-5" id="categories">
 <div class="col"><a href="#demo" class="btn btn-secondary m-1" role="button" style="font-size:  min(1.2rem , max(0.8rem , calc(1rem + 0.025*(9rem - 5rem))));"><i class="far fa-folder-open mr-2" aria-hidden="true"></i>demo<span class="badge rounded-pill chulapa-pill-bg-secondary ml-2">9</span></a><a href="#picture" class="btn btn-secondary m-1" role="button" style="font-size:  min(1.2rem , max(0.8rem , calc(1rem + 0.025*(3rem - 5rem))));"><i class="far fa-folder-open mr-2" aria-hidden="true"></i>picture<span class="badge rounded-pill chulapa-pill-bg-secondary ml-2">3</span></a><a href="#tutorial" class="btn btn-secondary m-1" role="button" style="font-size:  min(1.2rem , max(0.8rem , calc(1rem + 0.025*(2rem - 5rem))));"><i class="far fa-folder-open mr-2" aria-hidden="true"></i>tutorial<span class="badge rounded-pill chulapa-pill-bg-secondary ml-2">2</span></a><a href="#author-guest" class="btn btn-secondary m-1" role="button" style="font-size:  min(1.2rem , max(0.8rem , calc(1rem + 0.025*(2rem - 5rem))));"><i class="far fa-folder-open mr-2" aria-hidden="true"></i>author-guest<span class="badge rounded-pill chulapa-pill-bg-secondary ml-2">2</span></a><a href="#layout" class="btn btn-secondary m-1" role="button" style="font-size:  min(1.2rem , max(0.8rem , calc(1rem + 0.025*(2rem - 5rem))));"><i class="far fa-folder-open mr-2" aria-hidden="true"></i>layout<span class="badge rounded-pill chulapa-pill-bg-secondary ml-2">2</span></a><a href="#landing-page" class="btn btn-secondary m-1" role="button" style="font-size:  min(1.2rem , max(0.8rem , calc(1rem + 0.025*(1rem - 5rem))));"><i class="far fa-folder-open mr-2" aria-hidden="true"></i>landing-page<span class="badge rounded-pill chulapa-pill-bg-secondary ml-2">1</span></a><a href="#landingpage" class="btn btn-secondary m-1" role="button" style="font-size:  min(1.2rem , max(0.8rem , calc(1rem + 0.025*(1rem - 5rem))));"><i class="far fa-folder-open mr-2" aria-hidden="true"></i>landingpage<span class="badge rounded-pill chulapa-pill-bg-secondary ml-2">1</span></a></div>
 </div>
@@ -302,7 +191,7 @@ function closeSideBar() {
  <article class="chulapa-links-hover-only my-1 mb-4 row g-0">
    <div class="col">
      <h6><a href="https://dieghernan.github.io/chulapa-remote/demo/09-image-header">Image on header</a></h6><p>Transparencies work better</p><div class="small">
-        <i class="far fa-calendar" aria-hidden="true"></i> <time datetime="2022-12-14T07:39:20+00:00">december 14, 2022</time>
+        <i class="far fa-calendar" aria-hidden="true"></i> <time datetime="2022-12-14T10:51:32+00:00">december 14, 2022</time>
  | 
         <i class="far fa-clock" aria-hidden="true"></i> &lt; 1’<span class="ml-2 badge chulapa-pill-bg-body">demo</span></div>
    </div>
@@ -312,7 +201,7 @@ function closeSideBar() {
  <article class="chulapa-links-hover-only my-1 mb-4 row g-0">
    <div class="col">
      <h6><a href="https://dieghernan.github.io/chulapa-remote/demo/08-minimal">Layout minimal</a></h6><p>A blank canvas for you</p><div class="small">
-        <i class="far fa-calendar" aria-hidden="true"></i> <time datetime="2022-12-14T07:39:20+00:00">december 14, 2022</time>
+        <i class="far fa-calendar" aria-hidden="true"></i> <time datetime="2022-12-14T10:51:32+00:00">december 14, 2022</time>
  | 
         <i class="far fa-clock" aria-hidden="true"></i> &lt; 1’<span class="ml-2 badge chulapa-pill-bg-body">demo</span></div>
    </div>
@@ -322,7 +211,7 @@ function closeSideBar() {
  <article class="chulapa-links-hover-only my-1 mb-4 row g-0">
    <div class="col">
      <h6><a href="https://dieghernan.github.io/chulapa-remote/demo/02-plainpage-img">Plain page with image</a></h6><p>Expanding the layout</p><div class="small">
-        <i class="far fa-calendar" aria-hidden="true"></i> <time datetime="2022-12-14T07:39:20+00:00">december 14, 2022</time>
+        <i class="far fa-calendar" aria-hidden="true"></i> <time datetime="2022-12-14T10:51:32+00:00">december 14, 2022</time>
  | 
         <i class="far fa-clock" aria-hidden="true"></i> &lt; 1’<span class="ml-2 badge chulapa-pill-bg-body">demo</span></div>
    </div>
@@ -332,7 +221,7 @@ function closeSideBar() {
  <article class="chulapa-links-hover-only my-1 mb-4 row g-0">
    <div class="col">
      <h6><a href="https://dieghernan.github.io/chulapa-remote/demo/01-plainpage">Plain page</a></h6><div class="small">
-        <i class="far fa-calendar" aria-hidden="true"></i> <time datetime="2022-12-14T07:39:20+00:00">december 14, 2022</time>
+        <i class="far fa-calendar" aria-hidden="true"></i> <time datetime="2022-12-14T10:51:32+00:00">december 14, 2022</time>
  | 
         <i class="far fa-clock" aria-hidden="true"></i> &lt; 1’<span class="ml-2 badge chulapa-pill-bg-body">demo</span></div>
    </div>
@@ -430,7 +319,7 @@ function closeSideBar() {
  <article class="chulapa-links-hover-only my-1 mb-4 row g-0">
    <div class="col">
      <h6><a href="https://dieghernan.github.io/chulapa-remote/cheatsheets/02-kramdown-cheat-sheet">kramdown cheatsheet</a></h6><p>Beyond Markdown</p><div class="small">
-        <i class="far fa-calendar" aria-hidden="true"></i> <time datetime="2022-12-14T07:39:20+00:00">december 14, 2022</time>
+        <i class="far fa-calendar" aria-hidden="true"></i> <time datetime="2022-12-14T10:51:32+00:00">december 14, 2022</time>
  | 
         <i class="far fa-clock" aria-hidden="true"></i> 2’<span class="ml-2 badge chulapa-pill-bg-body">cheatsheet</span></div>
    </div>
@@ -438,7 +327,7 @@ function closeSideBar() {
  <article class="chulapa-links-hover-only my-1 mb-4 row g-0">
    <div class="col">
      <h6><a href="https://dieghernan.github.io/chulapa-remote/cheatsheets/01-markdown-cheat-sheet">Markdown cheatsheet</a></h6><p>The basic syntax of your page</p><div class="small">
-        <i class="far fa-calendar" aria-hidden="true"></i> <time datetime="2022-12-14T07:39:20+00:00">december 14, 2022</time>
+        <i class="far fa-calendar" aria-hidden="true"></i> <time datetime="2022-12-14T10:51:32+00:00">december 14, 2022</time>
  | 
         <i class="far fa-clock" aria-hidden="true"></i> 3’<span class="ml-2 badge chulapa-pill-bg-body">cheatsheet</span></div>
    </div>
@@ -480,7 +369,7 @@ function closeSideBar() {
  <article class="chulapa-links-hover-only my-1 mb-4 row g-0">
    <div class="col">
      <h6><a href="https://dieghernan.github.io/chulapa-remote/demo/09-image-header">Image on header</a></h6><p>Transparencies work better</p><div class="small">
-        <i class="far fa-calendar" aria-hidden="true"></i> <time datetime="2022-12-14T07:39:20+00:00">december 14, 2022</time>
+        <i class="far fa-calendar" aria-hidden="true"></i> <time datetime="2022-12-14T10:51:32+00:00">december 14, 2022</time>
  | 
         <i class="far fa-clock" aria-hidden="true"></i> &lt; 1’<span class="ml-2 badge chulapa-pill-bg-body">demo</span></div>
    </div>
@@ -490,7 +379,7 @@ function closeSideBar() {
  <article class="chulapa-links-hover-only my-1 mb-4 row g-0">
    <div class="col">
      <h6><a href="https://dieghernan.github.io/chulapa-remote/demo/08-minimal">Layout minimal</a></h6><p>A blank canvas for you</p><div class="small">
-        <i class="far fa-calendar" aria-hidden="true"></i> <time datetime="2022-12-14T07:39:20+00:00">december 14, 2022</time>
+        <i class="far fa-calendar" aria-hidden="true"></i> <time datetime="2022-12-14T10:51:32+00:00">december 14, 2022</time>
  | 
         <i class="far fa-clock" aria-hidden="true"></i> &lt; 1’<span class="ml-2 badge chulapa-pill-bg-body">demo</span></div>
    </div>
@@ -566,7 +455,7 @@ function closeSideBar() {
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/gh/dieghernan/chulapa@master/assets/js/chulapa_script.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/dieghernan/chulapa@master/assets/js/chulapa_script.js"></script>
 	<!-- start custom scripts to be placed at the bottom of the page -->
 <!-- end custom bottom scripts -->
 	</body>
